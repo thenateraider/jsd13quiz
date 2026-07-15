@@ -24,9 +24,16 @@ export function validateData(calendarData = calendar, questions = questionBank) 
     quiz.questions.forEach((question, index) => {
       const label = `${entry.date} question ${index + 1}`;
       if (!question.prompt?.trim()) errors.push(`${label}: missing prompt`);
+      if (question.prompt?.length > 1000) errors.push(`${label}: prompt exceeds 1000 characters`);
       if (!question.explanation?.trim()) errors.push(`${label}: missing explanation`);
       if (!Array.isArray(question.choices) || question.choices.length !== 4) {
         errors.push(`${label}: must have exactly 4 choices`);
+      }
+      if (Array.isArray(question.choices)) {
+        question.choices.forEach((choice, choiceIndex) => {
+          if (!String(choice).trim()) errors.push(`${label}: choice ${choiceIndex + 1} is empty`);
+          if (String(choice).length > 1000) errors.push(`${label}: choice ${choiceIndex + 1} exceeds Discord field limit`);
+        });
       }
       if (!Number.isInteger(question.correctIndex) || question.correctIndex < 0 || question.correctIndex > 3) {
         errors.push(`${label}: invalid correctIndex`);

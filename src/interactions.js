@@ -7,6 +7,7 @@ import {
   getOrCreateSession,
   getProfile,
   getQuizPost,
+  getUserRank,
   recordAnswer,
 } from './database.js';
 import { publishQuiz } from './publisher.js';
@@ -27,6 +28,7 @@ function resultEmbed(result) {
       `Extra Bonus: **+${result.extraXp}**`,
       `รวมรอบนี้: **${result.totalXp} XP**`,
       `🔥 Current Combo: **${result.combo} วัน**`,
+      `🏅 อันดับปัจจุบัน: **${result.rank ? `#${result.rank}` : 'ยังไม่มีอันดับ'}**`,
     ].join('\n'));
 }
 
@@ -34,6 +36,7 @@ export async function handleInteraction(interaction) {
   if (interaction.isChatInputCommand()) {
     if (interaction.commandName === 'profile') {
       const stats = getProfile(interaction.user.id);
+      const rank = getUserRank(interaction.user.id);
       const accuracy = stats.total_answered
         ? Math.round(stats.total_correct / stats.total_answered * 100)
         : 0;
@@ -47,6 +50,7 @@ export async function handleInteraction(interaction) {
               `🔥 Current Combo: **${stats.current_combo}**`,
               `🏅 Longest Combo: **${stats.longest_combo}**`,
               `🎯 Accuracy: **${accuracy}%**`,
+              `🏅 อันดับปัจจุบัน: **${rank ? `#${rank}` : 'ยังไม่มีอันดับ'}**`,
             ].join('\n')),
         ],
         ephemeral: true,
@@ -55,15 +59,28 @@ export async function handleInteraction(interaction) {
 
     if (interaction.commandName === 'leaderboard') {
       const rows = getLeaderboard();
-      const text = rows.length
-        ? rows.map((row, index) =>
-            `${index + 1}. <@${row.user_id}> — **${row.total_xp} XP** 🔥${row.current_combo}`,
-          ).join('\n')
-        : 'ยังไม่มีคะแนน';
-
-      return interaction.reply({
-        embeds: [new EmbedBuilder().setTitle('🏆 JSD13 Leaderboard').setDescription(text)],
+      const lines = rows.length
+        ? rows.map((row) => `${row.rank}. <@${row.user_id}> — **${row.total_xp} XP** 🔥${row.current_combo}`)
+        : ['ยังไม่มีคะแนน'];
+      const pages = [];
+      let page = '';
+      for (const line of lines) {
+        if (page && page.length + line.length + 1 > 3800) {
+          pages.push(page);
+          page = '';
+        }
+        page += `${page ? '\n' : ''}${line}`;
+      }
+      pages.push(page);
+      await interaction.reply({
+        embeds: [new EmbedBuilder().setTitle('🏆 JSD13 Leaderboard — ทุกคน').setDescription(pages[0])],
       });
+      for (let index = 1; index < pages.length; index += 1) {
+        await interaction.followUp({
+          embeds: [new EmbedBuilder().setTitle(`🏆 JSD13 Leaderboard (${index + 1}/${pages.length})`).setDescription(pages[index])],
+        });
+      }
+      return;
     }
 
     if (interaction.commandName === 'quiz-today') {
@@ -213,6 +230,7 @@ export async function handleInteraction(interaction) {
         speedBonusPercent,
         elapsedSeconds: seconds,
       });
+      completed.result.rank = getUserRank(interaction.user.id);
 
       return interaction.update({
         content: feedback,

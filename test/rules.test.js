@@ -12,6 +12,7 @@ import {
 } from '../src/rules.js';
 import { validateData } from '../src/validate-data.js';
 import { getQuizProgress } from '../src/data.js';
+import { buildQuestion } from '../src/quiz-ui.js';
 
 test('question bank matches the complete calendar', () => {
   assert.deepEqual(validateData(calendar, questions), []);
@@ -55,4 +56,16 @@ test('quiz progress counts active quiz days and excludes holidays', () => {
   assert.deepEqual(getQuizProgress('2026-07-30'), { current: 10, total: 50, remaining: 40 });
   assert.equal(getQuizProgress('2026-07-28'), null);
   assert.deepEqual(getQuizProgress('2026-09-25'), { current: 50, total: 50, remaining: 0 });
+});
+
+test('question UI keeps full choices in embed and uses short answer buttons', () => {
+  const longHtml = '<main><section><h1>ข้อความตัวอย่างที่ยาวเกินความยาวของปุ่ม Discord</h1></section></main>';
+  const payload = buildQuestion('2026-07-15', 0, {
+    prompt: 'เลือกโค้ดที่ถูกต้อง',
+    choices: [longHtml, '<div>', '<span>', '<b>'],
+    points: 20,
+  }, 5);
+  assert.match(payload.embeds[0].data.fields[0].value, /```html/);
+  assert.match(payload.embeds[0].data.fields[0].value, /ข้อความตัวอย่าง/);
+  assert.deepEqual(payload.components[0].components.map((button) => button.data.label), ['A', 'B', 'C', 'D']);
 });

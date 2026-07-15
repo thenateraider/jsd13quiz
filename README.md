@@ -8,6 +8,7 @@ Discord bot สำหรับ Junior Software Developer Programme Cohort 13
 - แสดงสถานะ `Quiz วันที่ x/50` และจำนวนวัน Quiz ที่เหลือถึงวันสุดท้าย (ไม่นับวันหยุด)
 - อ่านปฏิทินจาก `data/calendar.json`
 - ปุ่มเริ่มทำ Quiz และตัวเลือก A–D แบบส่วนตัว
+- แสดงข้อความช้อยส์เต็มใน Embed (รองรับ code block) และใช้ปุ่มสั้น A–D เพื่อไม่ให้ข้อความถูกตัด
 - เก็บคำตอบและคะแนนด้วย SQLite
 - Speed Bonus หลังโพสต์คำถาม
 - Combo จากวันที่ผ่าน Quiz ติดต่อกัน
@@ -17,6 +18,7 @@ Discord bot สำหรับ Junior Software Developer Programme Cohort 13
 - `/quiz-today`
 - `/quiz-post date:YYYY-MM-DD`
 - `/quiz-import date:YYYY-MM-DD file:quiz.json` (Manage Server)
+- `/profile` แสดงอันดับปัจจุบัน และ `/leaderboard` แสดงผู้เล่นครบทุกคน (แบ่งหลายข้อความอัตโนมัติ)
 - มีคำถามตัวอย่างครบวันที่ 15–17 กรกฎาคม 2026
 
 ## 1. สิ่งที่ต้องติดตั้ง

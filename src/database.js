@@ -245,8 +245,19 @@ export function getProfile(userId) {
   };
 }
 
-export function getLeaderboard(limit = 10) {
+export function getUserRank(userId) {
   return db.prepare(`
-    SELECT * FROM user_stats ORDER BY total_xp DESC, total_correct DESC LIMIT ?
-  `).all(limit);
+    SELECT rank FROM (
+      SELECT user_id, RANK() OVER (ORDER BY total_xp DESC, total_correct DESC) AS rank
+      FROM user_stats
+    ) WHERE user_id = ?
+  `).get(userId)?.rank ?? null;
+}
+
+export function getLeaderboard(limit = null) {
+  const sql = `
+    SELECT *, RANK() OVER (ORDER BY total_xp DESC, total_correct DESC) AS rank
+    FROM user_stats ORDER BY total_xp DESC, total_correct DESC
+  `;
+  return limit === null ? db.prepare(sql).all() : db.prepare(`${sql} LIMIT ?`).all(limit);
 }
