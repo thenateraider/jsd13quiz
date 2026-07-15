@@ -1,0 +1,3912 @@
+{
+  "2026-07-15": {
+    "title": "HTML Fundamentals",
+    "questions": [
+      {
+        "prompt": "HTML ย่อมาจากอะไร?",
+        "choices": [
+          "HyperText Markup Language",
+          "High Transfer Machine Language",
+          "Hyperlink Text Management Language",
+          "Home Tool Markup Language"
+        ],
+        "correctIndex": 0,
+        "explanation": "HTML คือภาษามาร์กอัปสำหรับกำหนดโครงสร้างของหน้าเว็บ",
+        "points": 20
+      },
+      {
+        "prompt": "แท็กใดใช้สร้างลิงก์ไปยังหน้าอื่น?",
+        "choices": [
+          "<link>",
+          "<a>",
+          "<href>",
+          "<nav>"
+        ],
+        "correctIndex": 1,
+        "explanation": "<a> ใช้สร้าง hyperlink และกำหนดปลายทางด้วย href",
+        "points": 20
+      },
+      {
+        "prompt": "เนื้อหาที่ผู้ใช้มองเห็นบนหน้าเว็บควรอยู่ส่วนใด?",
+        "choices": [
+          "<head>",
+          "<meta>",
+          "<body>",
+          "<!DOCTYPE>"
+        ],
+        "correctIndex": 2,
+        "explanation": "เนื้อหาหลักที่แสดงผลอยู่ภายใน <body>",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น semantic element?",
+        "choices": [
+          "<div>",
+          "<span>",
+          "<section>",
+          "<b>"
+        ],
+        "correctIndex": 2,
+        "explanation": "<section> สื่อความหมายของโครงสร้างเนื้อหาได้ชัดเจน",
+        "points": 30
+      },
+      {
+        "prompt": "โครงสร้างใดเรียงลำดับได้ถูกต้อง?",
+        "choices": [
+          "<html><body><head></head></body></html>",
+          "<!DOCTYPE html><html><head></head><body></body></html>",
+          "<head><html></html></head><body></body>",
+          "<body><!DOCTYPE html><html></html></body>"
+        ],
+        "correctIndex": 1,
+        "explanation": "DOCTYPE มาก่อน จากนั้น html ครอบ head และ body",
+        "points": 30
+      }
+    ]
+  },
+  "2026-07-16": {
+    "title": "JavaScript Objects, Arrays & Functions",
+    "questions": [
+      {
+        "prompt": "ถ้า const user = { name: 'Nate' }; จะอ่านค่า name อย่างไร?",
+        "choices": [
+          "user->name",
+          "user.name",
+          "user[name()]",
+          "user::name"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dot notation ใช้อ่าน property ได้ด้วย user.name",
+        "points": 20
+      },
+      {
+        "prompt": "index แรกของ Array ใน JavaScript คือเลขใด?",
+        "choices": [
+          "-1",
+          "0",
+          "1",
+          "ขึ้นกับจำนวนสมาชิก"
+        ],
+        "correctIndex": 1,
+        "explanation": "Array ใช้ zero-based indexing",
+        "points": 20
+      },
+      {
+        "prompt": "เมธอดใดเพิ่มสมาชิกไว้ท้าย Array?",
+        "choices": [
+          "push()",
+          "pop()",
+          "shift()",
+          "slice()"
+        ],
+        "correctIndex": 0,
+        "explanation": "push() เพิ่มสมาชิกหนึ่งตัวหรือมากกว่าที่ท้าย Array",
+        "points": 25
+      },
+      {
+        "prompt": "คำสั่ง return ใน function มีหน้าที่หลักอะไร?",
+        "choices": [
+          "พิมพ์ค่าเสมอ",
+          "หยุดโปรแกรมทั้งหมด",
+          "ส่งค่ากลับและจบการทำงานของ function",
+          "สร้างตัวแปร global"
+        ],
+        "correctIndex": 2,
+        "explanation": "return ส่งผลลัพธ์กลับไปยังจุดเรียกและออกจาก function",
+        "points": 30
+      },
+      {
+        "prompt": "ผลลัพธ์ของ const x = [1,2]; x.push(3); x.length คืออะไร?",
+        "choices": [
+          "2",
+          "3",
+          "[1,2,3]",
+          "undefined"
+        ],
+        "correctIndex": 1,
+        "explanation": "หลัง push มีสมาชิก 3 ตัว ดังนั้น length เท่ากับ 3",
+        "points": 35
+      }
+    ]
+  },
+  "2026-07-17": {
+    "title": "Week 3 Catch-up Final",
+    "questions": [
+      {
+        "prompt": "แท็กใดเหมาะกับเมนูนำทางหลักของเว็บไซต์?",
+        "choices": [
+          "<nav>",
+          "<main-menu>",
+          "<route>",
+          "<links>"
+        ],
+        "correctIndex": 0,
+        "explanation": "<nav> เป็น semantic element สำหรับชุดลิงก์นำทาง",
+        "points": 25
+      },
+      {
+        "prompt": "ข้อใดเข้าถึงสมาชิกตัวที่สามของ const items = ['a','b','c']?",
+        "choices": [
+          "items[3]",
+          "items[2]",
+          "items.third",
+          "items(2)"
+        ],
+        "correctIndex": 1,
+        "explanation": "Array เริ่มที่ index 0 ดังนั้นตัวที่สามคือ index 2",
+        "points": 25
+      },
+      {
+        "prompt": "ข้อใดเป็น function declaration ที่ถูกต้อง?",
+        "choices": [
+          "function add(a,b) { return a+b; }",
+          "func add(a,b) => a+b",
+          "function = add(a,b)",
+          "def add(a,b):"
+        ],
+        "correctIndex": 0,
+        "explanation": "รูปแบบ function declaration คือ function ชื่อ(พารามิเตอร์) { ... }",
+        "points": 25
+      },
+      {
+        "prompt": "ฐานข้อมูลใดเป็น relational database?",
+        "choices": [
+          "MongoDB",
+          "PostgreSQL",
+          "ทั้งคู่เป็น document database",
+          "ไม่มีข้อใด"
+        ],
+        "correctIndex": 1,
+        "explanation": "PostgreSQL เป็นระบบฐานข้อมูลเชิงสัมพันธ์ ส่วน MongoDB เป็น document database",
+        "points": 25
+      },
+      {
+        "prompt": "Primary Key มีหน้าที่สำคัญอย่างไร?",
+        "choices": [
+          "ตกแต่งตาราง",
+          "ระบุแต่ละแถวไม่ให้ซ้ำ",
+          "เข้ารหัสฐานข้อมูล",
+          "สำรองข้อมูล"
+        ],
+        "correctIndex": 1,
+        "explanation": "Primary Key ใช้ระบุ record แต่ละแถวอย่างเป็นเอกลักษณ์",
+        "points": 30
+      },
+      {
+        "prompt": "ผลลัพธ์ของ typeof [] ใน JavaScript คืออะไร?",
+        "choices": [
+          "array",
+          "list",
+          "object",
+          "undefined"
+        ],
+        "correctIndex": 2,
+        "explanation": "ใน JavaScript typeof array คืนค่า 'object'",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดอธิบาย MongoDB document ได้ใกล้เคียงที่สุด?",
+        "choices": [
+          "แถวแบบตายตัวเท่านั้น",
+          "ข้อมูลลักษณะคล้าย JSON/BSON",
+          "ไฟล์ HTML",
+          "คำสั่ง Git"
+        ],
+        "correctIndex": 1,
+        "explanation": "MongoDB จัดเก็บข้อมูลเป็น document ในรูปแบบ BSON ที่มีโครงสร้างคล้าย JSON",
+        "points": 30
+      },
+      {
+        "prompt": "โค้ดใดจะคืนค่า 6?",
+        "choices": [
+          "[1,2,3].length",
+          "[1,2,3].reduce((a,b)=>a+b,0)",
+          "[1,2,3].push()",
+          "[1,2,3][3]"
+        ],
+        "correctIndex": 1,
+        "explanation": "reduce รวม 1 + 2 + 3 ได้ 6",
+        "points": 35
+      },
+      {
+        "prompt": "Agentic Engineering โดยพื้นฐานเน้นอะไร?",
+        "choices": [
+          "ใช้ระบบ/เอเจนต์ช่วยวางแผนและลงมือทำงานหลายขั้น",
+          "เขียน HTML โดยไม่ใช้แท็ก",
+          "ลบฐานข้อมูลอัตโนมัติ",
+          "แทนที่ Git ด้วย Discord"
+        ],
+        "correctIndex": 0,
+        "explanation": "แนวคิดหลักคือออกแบบ workflow ที่เอเจนต์สามารถวางแผน ใช้เครื่องมือ และดำเนินงานหลายขั้นภายใต้ข้อกำกับ",
+        "points": 35
+      },
+      {
+        "prompt": "ข้อใดแก้ bug ได้ถูกต้อง: if (name = 'Nate')",
+        "choices": [
+          "เปลี่ยนเป็น if (name === 'Nate')",
+          "ลบวงเล็บ",
+          "ใช้ if name := 'Nate'",
+          "เปลี่ยนเป็น name => 'Nate'"
+        ],
+        "correctIndex": 0,
+        "explanation": "= คือ assignment ส่วน === ใช้เปรียบเทียบค่าและชนิดข้อมูล",
+        "points": 40
+      }
+    ]
+  },
+  "2026-07-20": {
+    "title": "CSS Fundamentals",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ CSS Fundamentals มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "selectors ในบริบทของ CSS Fundamentals",
+          "properties ที่ไม่เกี่ยวกับโจทย์นี้",
+          "cascade ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "selectors เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Fundamentals",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน CSS Fundamentals แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "selectors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "properties ในบริบทของ CSS Fundamentals",
+          "cascade ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "properties เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Fundamentals",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ CSS Fundamentals อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "selectors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "properties ที่ไม่เกี่ยวกับโจทย์นี้",
+          "cascade ในบริบทของ CSS Fundamentals",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "cascade เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Fundamentals",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท CSS Fundamentals? (ข้อ 4)",
+        "choices": [
+          "selectors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "properties ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "specificity ในบริบทของ CSS Fundamentals"
+        ],
+        "correctIndex": 3,
+        "explanation": "specificity เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Fundamentals",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ CSS Fundamentals และเป้าหมายเรื่อง selectors? (ข้อ 5)",
+        "choices": [
+          "selectors ในบริบทของ CSS Fundamentals",
+          "properties ที่ไม่เกี่ยวกับโจทย์นี้",
+          "cascade ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "selectors เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Fundamentals",
+        "points": 20
+      }
+    ]
+  },
+  "2026-07-21": {
+    "title": "CSS Box Model & Layout",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ CSS Box Model & Layout มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "margin ในบริบทของ CSS Box Model & Layout",
+          "border ที่ไม่เกี่ยวกับโจทย์นี้",
+          "padding ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "margin เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Box Model & Layout",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน CSS Box Model & Layout แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "margin ที่ไม่เกี่ยวกับโจทย์นี้",
+          "border ในบริบทของ CSS Box Model & Layout",
+          "padding ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "border เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Box Model & Layout",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ CSS Box Model & Layout อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "margin ที่ไม่เกี่ยวกับโจทย์นี้",
+          "border ที่ไม่เกี่ยวกับโจทย์นี้",
+          "padding ในบริบทของ CSS Box Model & Layout",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "padding เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Box Model & Layout",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท CSS Box Model & Layout? (ข้อ 4)",
+        "choices": [
+          "margin ที่ไม่เกี่ยวกับโจทย์นี้",
+          "border ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "display ในบริบทของ CSS Box Model & Layout"
+        ],
+        "correctIndex": 3,
+        "explanation": "display เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Box Model & Layout",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ CSS Box Model & Layout และเป้าหมายเรื่อง Flexbox? (ข้อ 5)",
+        "choices": [
+          "Flexbox ในบริบทของ CSS Box Model & Layout",
+          "margin ที่ไม่เกี่ยวกับโจทย์นี้",
+          "border ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "Flexbox เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ CSS Box Model & Layout",
+        "points": 22
+      }
+    ]
+  },
+  "2026-07-22": {
+    "title": "Responsive Web Design",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Responsive Web Design มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "media queries ในบริบทของ Responsive Web Design",
+          "relative units ที่ไม่เกี่ยวกับโจทย์นี้",
+          "mobile-first design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "media queries เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Responsive Web Design",
+        "points": 24
+      },
+      {
+        "prompt": "หากกำลังทบทวน Responsive Web Design แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "media queries ที่ไม่เกี่ยวกับโจทย์นี้",
+          "relative units ในบริบทของ Responsive Web Design",
+          "mobile-first design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "relative units เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Responsive Web Design",
+        "points": 24
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Responsive Web Design อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "media queries ที่ไม่เกี่ยวกับโจทย์นี้",
+          "relative units ที่ไม่เกี่ยวกับโจทย์นี้",
+          "mobile-first design ในบริบทของ Responsive Web Design",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "mobile-first design เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Responsive Web Design",
+        "points": 24
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Responsive Web Design? (ข้อ 4)",
+        "choices": [
+          "relative units ที่ไม่เกี่ยวกับโจทย์นี้",
+          "mobile-first design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "media queries ในบริบทของ Responsive Web Design"
+        ],
+        "correctIndex": 3,
+        "explanation": "media queries เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Responsive Web Design",
+        "points": 24
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Responsive Web Design และเป้าหมายเรื่อง relative units? (ข้อ 5)",
+        "choices": [
+          "relative units ในบริบทของ Responsive Web Design",
+          "media queries ที่ไม่เกี่ยวกับโจทย์นี้",
+          "mobile-first design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "relative units เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Responsive Web Design",
+        "points": 24
+      }
+    ]
+  },
+  "2026-07-23": {
+    "title": "UX/UI, Design Thinking & Problem Solving",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ UX/UI, Design Thinking & Problem Solving มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "user needs ในบริบทของ UX/UI, Design Thinking & Problem Solving",
+          "prototype ที่ไม่เกี่ยวกับโจทย์นี้",
+          "usability ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "user needs เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ UX/UI, Design Thinking & Problem Solving",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน UX/UI, Design Thinking & Problem Solving แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "user needs ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype ในบริบทของ UX/UI, Design Thinking & Problem Solving",
+          "usability ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "prototype เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ UX/UI, Design Thinking & Problem Solving",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ UX/UI, Design Thinking & Problem Solving อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "user needs ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype ที่ไม่เกี่ยวกับโจทย์นี้",
+          "usability ในบริบทของ UX/UI, Design Thinking & Problem Solving",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "usability เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ UX/UI, Design Thinking & Problem Solving",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท UX/UI, Design Thinking & Problem Solving? (ข้อ 4)",
+        "choices": [
+          "user needs ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "problem decomposition ในบริบทของ UX/UI, Design Thinking & Problem Solving"
+        ],
+        "correctIndex": 3,
+        "explanation": "problem decomposition เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ UX/UI, Design Thinking & Problem Solving",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ UX/UI, Design Thinking & Problem Solving และเป้าหมายเรื่อง user needs? (ข้อ 5)",
+        "choices": [
+          "user needs ในบริบทของ UX/UI, Design Thinking & Problem Solving",
+          "prototype ที่ไม่เกี่ยวกับโจทย์นี้",
+          "usability ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "user needs เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ UX/UI, Design Thinking & Problem Solving",
+        "points": 26
+      }
+    ]
+  },
+  "2026-07-24": {
+    "title": "Week 4 Final: HTML/CSS Responsive Web",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 4 Final: HTML/CSS Responsive Web มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "HTML ในบริบทของ Week 4 Final: HTML/CSS Responsive Web",
+          "CSS ที่ไม่เกี่ยวกับโจทย์นี้",
+          "responsive design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "HTML เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 4 Final: HTML/CSS Responsive Web แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "HTML ที่ไม่เกี่ยวกับโจทย์นี้",
+          "CSS ในบริบทของ Week 4 Final: HTML/CSS Responsive Web",
+          "responsive design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "CSS เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 4 Final: HTML/CSS Responsive Web อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "HTML ที่ไม่เกี่ยวกับโจทย์นี้",
+          "CSS ที่ไม่เกี่ยวกับโจทย์นี้",
+          "responsive design ในบริบทของ Week 4 Final: HTML/CSS Responsive Web",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "responsive design เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 4 Final: HTML/CSS Responsive Web? (ข้อ 4)",
+        "choices": [
+          "HTML ที่ไม่เกี่ยวกับโจทย์นี้",
+          "CSS ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "UX/UI ในบริบทของ Week 4 Final: HTML/CSS Responsive Web"
+        ],
+        "correctIndex": 3,
+        "explanation": "UX/UI เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 4 Final: HTML/CSS Responsive Web และเป้าหมายเรื่อง orientation to detail? (ข้อ 5)",
+        "choices": [
+          "orientation to detail ในบริบทของ Week 4 Final: HTML/CSS Responsive Web",
+          "HTML ที่ไม่เกี่ยวกับโจทย์นี้",
+          "CSS ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "orientation to detail เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 4 Final: HTML/CSS Responsive Web มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "CSS ที่ไม่เกี่ยวกับโจทย์นี้",
+          "HTML ในบริบทของ Week 4 Final: HTML/CSS Responsive Web",
+          "responsive design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "HTML เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 4 Final: HTML/CSS Responsive Web แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "HTML ที่ไม่เกี่ยวกับโจทย์นี้",
+          "responsive design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "CSS ในบริบทของ Week 4 Final: HTML/CSS Responsive Web",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "CSS เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 4 Final: HTML/CSS Responsive Web อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "HTML ที่ไม่เกี่ยวกับโจทย์นี้",
+          "CSS ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "responsive design ในบริบทของ Week 4 Final: HTML/CSS Responsive Web"
+        ],
+        "correctIndex": 3,
+        "explanation": "responsive design เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 4 Final: HTML/CSS Responsive Web? (ข้อ 9)",
+        "choices": [
+          "UX/UI ในบริบทของ Week 4 Final: HTML/CSS Responsive Web",
+          "HTML ที่ไม่เกี่ยวกับโจทย์นี้",
+          "CSS ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "UX/UI เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 4 Final: HTML/CSS Responsive Web และเป้าหมายเรื่อง orientation to detail? (ข้อ 10)",
+        "choices": [
+          "HTML ที่ไม่เกี่ยวกับโจทย์นี้",
+          "orientation to detail ในบริบทของ Week 4 Final: HTML/CSS Responsive Web",
+          "CSS ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "orientation to detail เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 4 Final: HTML/CSS Responsive Web",
+        "points": 30
+      }
+    ]
+  },
+  "2026-07-27": {
+    "title": "Developer Role & Staying Up to Date",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Developer Role & Staying Up to Date มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "JSD responsibilities ในบริบทของ Developer Role & Staying Up to Date",
+          "documentation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "learning sources ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "JSD responsibilities เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Developer Role & Staying Up to Date",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน Developer Role & Staying Up to Date แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "JSD responsibilities ที่ไม่เกี่ยวกับโจทย์นี้",
+          "documentation ในบริบทของ Developer Role & Staying Up to Date",
+          "learning sources ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "documentation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Developer Role & Staying Up to Date",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Developer Role & Staying Up to Date อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "JSD responsibilities ที่ไม่เกี่ยวกับโจทย์นี้",
+          "documentation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "learning sources ในบริบทของ Developer Role & Staying Up to Date",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "learning sources เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Developer Role & Staying Up to Date",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Developer Role & Staying Up to Date? (ข้อ 4)",
+        "choices": [
+          "JSD responsibilities ที่ไม่เกี่ยวกับโจทย์นี้",
+          "documentation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "technology evaluation ในบริบทของ Developer Role & Staying Up to Date"
+        ],
+        "correctIndex": 3,
+        "explanation": "technology evaluation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Developer Role & Staying Up to Date",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Developer Role & Staying Up to Date และเป้าหมายเรื่อง JSD responsibilities? (ข้อ 5)",
+        "choices": [
+          "JSD responsibilities ในบริบทของ Developer Role & Staying Up to Date",
+          "documentation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "learning sources ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "JSD responsibilities เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Developer Role & Staying Up to Date",
+        "points": 20
+      }
+    ]
+  },
+  "2026-07-30": {
+    "title": "Git & GitHub Team Workflow",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Git & GitHub Team Workflow มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "branching ในบริบทของ Git & GitHub Team Workflow",
+          "pull requests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "merge conflicts ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "branching เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Git & GitHub Team Workflow",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน Git & GitHub Team Workflow แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "branching ที่ไม่เกี่ยวกับโจทย์นี้",
+          "pull requests ในบริบทของ Git & GitHub Team Workflow",
+          "merge conflicts ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "pull requests เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Git & GitHub Team Workflow",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Git & GitHub Team Workflow อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "branching ที่ไม่เกี่ยวกับโจทย์นี้",
+          "pull requests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "merge conflicts ในบริบทของ Git & GitHub Team Workflow",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "merge conflicts เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Git & GitHub Team Workflow",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Git & GitHub Team Workflow? (ข้อ 4)",
+        "choices": [
+          "branching ที่ไม่เกี่ยวกับโจทย์นี้",
+          "pull requests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "team conventions ในบริบทของ Git & GitHub Team Workflow"
+        ],
+        "correctIndex": 3,
+        "explanation": "team conventions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Git & GitHub Team Workflow",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Git & GitHub Team Workflow และเป้าหมายเรื่อง branching? (ข้อ 5)",
+        "choices": [
+          "branching ในบริบทของ Git & GitHub Team Workflow",
+          "pull requests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "merge conflicts ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "branching เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Git & GitHub Team Workflow",
+        "points": 26
+      }
+    ]
+  },
+  "2026-07-31": {
+    "title": "Week 5 Final: Git Teamwork + Conditionals & Loops",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 5 Final: Git Teamwork + Conditionals & Loops มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "developer role ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops",
+          "Git team workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "if/else ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "developer role เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 5 Final: Git Teamwork + Conditionals & Loops แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "developer role ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Git team workflow ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops",
+          "if/else ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "Git team workflow เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 5 Final: Git Teamwork + Conditionals & Loops อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "developer role ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Git team workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "if/else ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "if/else เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 5 Final: Git Teamwork + Conditionals & Loops? (ข้อ 4)",
+        "choices": [
+          "developer role ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Git team workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "loops ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops"
+        ],
+        "correctIndex": 3,
+        "explanation": "loops เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 5 Final: Git Teamwork + Conditionals & Loops และเป้าหมายเรื่อง group project practices? (ข้อ 5)",
+        "choices": [
+          "group project practices ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops",
+          "developer role ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Git team workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "group project practices เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 5 Final: Git Teamwork + Conditionals & Loops มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "Git team workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "developer role ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops",
+          "if/else ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "developer role เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 5 Final: Git Teamwork + Conditionals & Loops แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "developer role ที่ไม่เกี่ยวกับโจทย์นี้",
+          "if/else ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Git team workflow ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "Git team workflow เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 5 Final: Git Teamwork + Conditionals & Loops อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "developer role ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Git team workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "if/else ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops"
+        ],
+        "correctIndex": 3,
+        "explanation": "if/else เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 5 Final: Git Teamwork + Conditionals & Loops? (ข้อ 9)",
+        "choices": [
+          "loops ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops",
+          "developer role ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Git team workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "loops เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 5 Final: Git Teamwork + Conditionals & Loops และเป้าหมายเรื่อง group project practices? (ข้อ 10)",
+        "choices": [
+          "developer role ที่ไม่เกี่ยวกับโจทย์นี้",
+          "group project practices ในบริบทของ Week 5 Final: Git Teamwork + Conditionals & Loops",
+          "Git team workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "group project practices เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 5 Final: Git Teamwork + Conditionals & Loops",
+        "points": 30
+      }
+    ]
+  },
+  "2026-08-03": {
+    "title": "Objects & Arrays 2",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Objects & Arrays 2 มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "nested data ในบริบทของ Objects & Arrays 2",
+          "array transformations ที่ไม่เกี่ยวกับโจทย์นี้",
+          "immutability basics ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "nested data เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Objects & Arrays 2",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน Objects & Arrays 2 แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "nested data ที่ไม่เกี่ยวกับโจทย์นี้",
+          "array transformations ในบริบทของ Objects & Arrays 2",
+          "immutability basics ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "array transformations เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Objects & Arrays 2",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Objects & Arrays 2 อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "nested data ที่ไม่เกี่ยวกับโจทย์นี้",
+          "array transformations ที่ไม่เกี่ยวกับโจทย์นี้",
+          "immutability basics ในบริบทของ Objects & Arrays 2",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "immutability basics เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Objects & Arrays 2",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Objects & Arrays 2? (ข้อ 4)",
+        "choices": [
+          "array transformations ที่ไม่เกี่ยวกับโจทย์นี้",
+          "immutability basics ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "nested data ในบริบทของ Objects & Arrays 2"
+        ],
+        "correctIndex": 3,
+        "explanation": "nested data เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Objects & Arrays 2",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Objects & Arrays 2 และเป้าหมายเรื่อง array transformations? (ข้อ 5)",
+        "choices": [
+          "array transformations ในบริบทของ Objects & Arrays 2",
+          "nested data ที่ไม่เกี่ยวกับโจทย์นี้",
+          "immutability basics ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "array transformations เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Objects & Arrays 2",
+        "points": 20
+      }
+    ]
+  },
+  "2026-08-04": {
+    "title": "Higher-Order Functions & Iterables",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Higher-Order Functions & Iterables มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "map ในบริบทของ Higher-Order Functions & Iterables",
+          "filter ที่ไม่เกี่ยวกับโจทย์นี้",
+          "reduce ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "map เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Higher-Order Functions & Iterables",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน Higher-Order Functions & Iterables แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "map ที่ไม่เกี่ยวกับโจทย์นี้",
+          "filter ในบริบทของ Higher-Order Functions & Iterables",
+          "reduce ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "filter เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Higher-Order Functions & Iterables",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Higher-Order Functions & Iterables อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "map ที่ไม่เกี่ยวกับโจทย์นี้",
+          "filter ที่ไม่เกี่ยวกับโจทย์นี้",
+          "reduce ในบริบทของ Higher-Order Functions & Iterables",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "reduce เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Higher-Order Functions & Iterables",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Higher-Order Functions & Iterables? (ข้อ 4)",
+        "choices": [
+          "map ที่ไม่เกี่ยวกับโจทย์นี้",
+          "filter ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "callbacks ในบริบทของ Higher-Order Functions & Iterables"
+        ],
+        "correctIndex": 3,
+        "explanation": "callbacks เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Higher-Order Functions & Iterables",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Higher-Order Functions & Iterables และเป้าหมายเรื่อง iteration protocols? (ข้อ 5)",
+        "choices": [
+          "iteration protocols ในบริบทของ Higher-Order Functions & Iterables",
+          "map ที่ไม่เกี่ยวกับโจทย์นี้",
+          "filter ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "iteration protocols เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Higher-Order Functions & Iterables",
+        "points": 22
+      }
+    ]
+  },
+  "2026-08-05": {
+    "title": "Asynchronous JavaScript",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Asynchronous JavaScript มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "event loop ในบริบทของ Asynchronous JavaScript",
+          "promises ที่ไม่เกี่ยวกับโจทย์นี้",
+          "async/await ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "event loop เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Asynchronous JavaScript",
+        "points": 24
+      },
+      {
+        "prompt": "หากกำลังทบทวน Asynchronous JavaScript แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "event loop ที่ไม่เกี่ยวกับโจทย์นี้",
+          "promises ในบริบทของ Asynchronous JavaScript",
+          "async/await ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "promises เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Asynchronous JavaScript",
+        "points": 24
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Asynchronous JavaScript อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "event loop ที่ไม่เกี่ยวกับโจทย์นี้",
+          "promises ที่ไม่เกี่ยวกับโจทย์นี้",
+          "async/await ในบริบทของ Asynchronous JavaScript",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "async/await เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Asynchronous JavaScript",
+        "points": 24
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Asynchronous JavaScript? (ข้อ 4)",
+        "choices": [
+          "event loop ที่ไม่เกี่ยวกับโจทย์นี้",
+          "promises ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "error handling ในบริบทของ Asynchronous JavaScript"
+        ],
+        "correctIndex": 3,
+        "explanation": "error handling เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Asynchronous JavaScript",
+        "points": 24
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Asynchronous JavaScript และเป้าหมายเรื่อง event loop? (ข้อ 5)",
+        "choices": [
+          "event loop ในบริบทของ Asynchronous JavaScript",
+          "promises ที่ไม่เกี่ยวกับโจทย์นี้",
+          "async/await ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "event loop เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Asynchronous JavaScript",
+        "points": 24
+      }
+    ]
+  },
+  "2026-08-06": {
+    "title": "Mutation, Prototype & OOP",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Mutation, Prototype & OOP มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "mutation ในบริบทของ Mutation, Prototype & OOP",
+          "prototype chain ที่ไม่เกี่ยวกับโจทย์นี้",
+          "classes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "mutation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Mutation, Prototype & OOP",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน Mutation, Prototype & OOP แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "mutation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype chain ในบริบทของ Mutation, Prototype & OOP",
+          "classes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "prototype chain เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Mutation, Prototype & OOP",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Mutation, Prototype & OOP อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "mutation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype chain ที่ไม่เกี่ยวกับโจทย์นี้",
+          "classes ในบริบทของ Mutation, Prototype & OOP",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "classes เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Mutation, Prototype & OOP",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Mutation, Prototype & OOP? (ข้อ 4)",
+        "choices": [
+          "mutation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype chain ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "encapsulation ในบริบทของ Mutation, Prototype & OOP"
+        ],
+        "correctIndex": 3,
+        "explanation": "encapsulation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Mutation, Prototype & OOP",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Mutation, Prototype & OOP และเป้าหมายเรื่อง mutation? (ข้อ 5)",
+        "choices": [
+          "mutation ในบริบทของ Mutation, Prototype & OOP",
+          "prototype chain ที่ไม่เกี่ยวกับโจทย์นี้",
+          "classes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "mutation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Mutation, Prototype & OOP",
+        "points": 26
+      }
+    ]
+  },
+  "2026-08-07": {
+    "title": "Week 6 Final: Advanced JavaScript",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 6 Final: Advanced JavaScript มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "arrays ในบริบทของ Week 6 Final: Advanced JavaScript",
+          "higher-order functions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "async JavaScript ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "arrays เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 6 Final: Advanced JavaScript แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "higher-order functions ในบริบทของ Week 6 Final: Advanced JavaScript",
+          "async JavaScript ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "higher-order functions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 6 Final: Advanced JavaScript อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "higher-order functions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "async JavaScript ในบริบทของ Week 6 Final: Advanced JavaScript",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "async JavaScript เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 6 Final: Advanced JavaScript? (ข้อ 4)",
+        "choices": [
+          "arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "higher-order functions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "OOP ในบริบทของ Week 6 Final: Advanced JavaScript"
+        ],
+        "correctIndex": 3,
+        "explanation": "OOP เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 6 Final: Advanced JavaScript และเป้าหมายเรื่อง project teamwork? (ข้อ 5)",
+        "choices": [
+          "project teamwork ในบริบทของ Week 6 Final: Advanced JavaScript",
+          "arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "higher-order functions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "project teamwork เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 6 Final: Advanced JavaScript มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "higher-order functions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "arrays ในบริบทของ Week 6 Final: Advanced JavaScript",
+          "async JavaScript ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "arrays เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 6 Final: Advanced JavaScript แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "async JavaScript ที่ไม่เกี่ยวกับโจทย์นี้",
+          "higher-order functions ในบริบทของ Week 6 Final: Advanced JavaScript",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "higher-order functions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 6 Final: Advanced JavaScript อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "higher-order functions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "async JavaScript ในบริบทของ Week 6 Final: Advanced JavaScript"
+        ],
+        "correctIndex": 3,
+        "explanation": "async JavaScript เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 6 Final: Advanced JavaScript? (ข้อ 9)",
+        "choices": [
+          "OOP ในบริบทของ Week 6 Final: Advanced JavaScript",
+          "arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "higher-order functions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "OOP เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 6 Final: Advanced JavaScript และเป้าหมายเรื่อง project teamwork? (ข้อ 10)",
+        "choices": [
+          "arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "project teamwork ในบริบทของ Week 6 Final: Advanced JavaScript",
+          "higher-order functions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "project teamwork เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 6 Final: Advanced JavaScript",
+        "points": 30
+      }
+    ]
+  },
+  "2026-08-10": {
+    "title": "OOP Recap & Code Reading",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ OOP Recap & Code Reading มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "classes ในบริบทของ OOP Recap & Code Reading",
+          "inheritance ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "classes เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ OOP Recap & Code Reading",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน OOP Recap & Code Reading แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "classes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "inheritance ในบริบทของ OOP Recap & Code Reading",
+          "prototype ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "inheritance เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ OOP Recap & Code Reading",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ OOP Recap & Code Reading อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "classes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "inheritance ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype ในบริบทของ OOP Recap & Code Reading",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "prototype เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ OOP Recap & Code Reading",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท OOP Recap & Code Reading? (ข้อ 4)",
+        "choices": [
+          "classes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "inheritance ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "debugging object-oriented code ในบริบทของ OOP Recap & Code Reading"
+        ],
+        "correctIndex": 3,
+        "explanation": "debugging object-oriented code เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ OOP Recap & Code Reading",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ OOP Recap & Code Reading และเป้าหมายเรื่อง classes? (ข้อ 5)",
+        "choices": [
+          "classes ในบริบทของ OOP Recap & Code Reading",
+          "inheritance ที่ไม่เกี่ยวกับโจทย์นี้",
+          "prototype ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "classes เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ OOP Recap & Code Reading",
+        "points": 20
+      }
+    ]
+  },
+  "2026-08-11": {
+    "title": "DOM Fundamentals",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ DOM Fundamentals มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "DOM tree ในบริบทของ DOM Fundamentals",
+          "selectors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "events ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "DOM tree เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ DOM Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน DOM Fundamentals แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "DOM tree ที่ไม่เกี่ยวกับโจทย์นี้",
+          "selectors ในบริบทของ DOM Fundamentals",
+          "events ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "selectors เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ DOM Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ DOM Fundamentals อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "DOM tree ที่ไม่เกี่ยวกับโจทย์นี้",
+          "selectors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "events ในบริบทของ DOM Fundamentals",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "events เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ DOM Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท DOM Fundamentals? (ข้อ 4)",
+        "choices": [
+          "DOM tree ที่ไม่เกี่ยวกับโจทย์นี้",
+          "selectors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "element manipulation ในบริบทของ DOM Fundamentals"
+        ],
+        "correctIndex": 3,
+        "explanation": "element manipulation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ DOM Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ DOM Fundamentals และเป้าหมายเรื่อง DOM tree? (ข้อ 5)",
+        "choices": [
+          "DOM tree ในบริบทของ DOM Fundamentals",
+          "selectors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "events ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "DOM tree เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ DOM Fundamentals",
+        "points": 22
+      }
+    ]
+  },
+  "2026-08-13": {
+    "title": "React JSX & Components",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ React JSX & Components มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "JSX ในบริบทของ React JSX & Components",
+          "components ที่ไม่เกี่ยวกับโจทย์นี้",
+          "props ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "JSX เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React JSX & Components",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน React JSX & Components แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "JSX ที่ไม่เกี่ยวกับโจทย์นี้",
+          "components ในบริบทของ React JSX & Components",
+          "props ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "components เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React JSX & Components",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ React JSX & Components อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "JSX ที่ไม่เกี่ยวกับโจทย์นี้",
+          "components ที่ไม่เกี่ยวกับโจทย์นี้",
+          "props ในบริบทของ React JSX & Components",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "props เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React JSX & Components",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท React JSX & Components? (ข้อ 4)",
+        "choices": [
+          "JSX ที่ไม่เกี่ยวกับโจทย์นี้",
+          "components ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "component composition ในบริบทของ React JSX & Components"
+        ],
+        "correctIndex": 3,
+        "explanation": "component composition เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React JSX & Components",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ React JSX & Components และเป้าหมายเรื่อง JSX? (ข้อ 5)",
+        "choices": [
+          "JSX ในบริบทของ React JSX & Components",
+          "components ที่ไม่เกี่ยวกับโจทย์นี้",
+          "props ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "JSX เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React JSX & Components",
+        "points": 26
+      }
+    ]
+  },
+  "2026-08-14": {
+    "title": "Week 7 Final: DOM + React useState",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 7 Final: DOM + React useState มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "OOP ในบริบทของ Week 7 Final: DOM + React useState",
+          "DOM ที่ไม่เกี่ยวกับโจทย์นี้",
+          "JSX ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "OOP เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 7 Final: DOM + React useState แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "OOP ที่ไม่เกี่ยวกับโจทย์นี้",
+          "DOM ในบริบทของ Week 7 Final: DOM + React useState",
+          "JSX ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "DOM เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 7 Final: DOM + React useState อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "OOP ที่ไม่เกี่ยวกับโจทย์นี้",
+          "DOM ที่ไม่เกี่ยวกับโจทย์นี้",
+          "JSX ในบริบทของ Week 7 Final: DOM + React useState",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "JSX เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 7 Final: DOM + React useState? (ข้อ 4)",
+        "choices": [
+          "OOP ที่ไม่เกี่ยวกับโจทย์นี้",
+          "DOM ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "components ในบริบทของ Week 7 Final: DOM + React useState"
+        ],
+        "correctIndex": 3,
+        "explanation": "components เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 7 Final: DOM + React useState และเป้าหมายเรื่อง props? (ข้อ 5)",
+        "choices": [
+          "props ในบริบทของ Week 7 Final: DOM + React useState",
+          "OOP ที่ไม่เกี่ยวกับโจทย์นี้",
+          "DOM ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "props เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 7 Final: DOM + React useState มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "OOP ที่ไม่เกี่ยวกับโจทย์นี้",
+          "useState ในบริบทของ Week 7 Final: DOM + React useState",
+          "DOM ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "useState เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 7 Final: DOM + React useState แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "DOM ที่ไม่เกี่ยวกับโจทย์นี้",
+          "JSX ที่ไม่เกี่ยวกับโจทย์นี้",
+          "OOP ในบริบทของ Week 7 Final: DOM + React useState",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "OOP เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 7 Final: DOM + React useState อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "OOP ที่ไม่เกี่ยวกับโจทย์นี้",
+          "JSX ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "DOM ในบริบทของ Week 7 Final: DOM + React useState"
+        ],
+        "correctIndex": 3,
+        "explanation": "DOM เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 7 Final: DOM + React useState? (ข้อ 9)",
+        "choices": [
+          "JSX ในบริบทของ Week 7 Final: DOM + React useState",
+          "OOP ที่ไม่เกี่ยวกับโจทย์นี้",
+          "DOM ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "JSX เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 7 Final: DOM + React useState และเป้าหมายเรื่อง components? (ข้อ 10)",
+        "choices": [
+          "OOP ที่ไม่เกี่ยวกับโจทย์นี้",
+          "components ในบริบทของ Week 7 Final: DOM + React useState",
+          "DOM ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "components เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 7 Final: DOM + React useState",
+        "points": 30
+      }
+    ]
+  },
+  "2026-08-17": {
+    "title": "React useEffect",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ React useEffect มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "effects ในบริบทของ React useEffect",
+          "dependency arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "cleanup ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "effects เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React useEffect",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน React useEffect แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "effects ที่ไม่เกี่ยวกับโจทย์นี้",
+          "dependency arrays ในบริบทของ React useEffect",
+          "cleanup ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "dependency arrays เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React useEffect",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ React useEffect อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "effects ที่ไม่เกี่ยวกับโจทย์นี้",
+          "dependency arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "cleanup ในบริบทของ React useEffect",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "cleanup เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React useEffect",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท React useEffect? (ข้อ 4)",
+        "choices": [
+          "effects ที่ไม่เกี่ยวกับโจทย์นี้",
+          "dependency arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "data fetching ในบริบทของ React useEffect"
+        ],
+        "correctIndex": 3,
+        "explanation": "data fetching เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React useEffect",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ React useEffect และเป้าหมายเรื่อง effects? (ข้อ 5)",
+        "choices": [
+          "effects ในบริบทของ React useEffect",
+          "dependency arrays ที่ไม่เกี่ยวกับโจทย์นี้",
+          "cleanup ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "effects เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React useEffect",
+        "points": 20
+      }
+    ]
+  },
+  "2026-08-18": {
+    "title": "React Router",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ React Router มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "routes ในบริบทของ React Router",
+          "links ที่ไม่เกี่ยวกับโจทย์นี้",
+          "parameters ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "routes เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Router",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน React Router แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "routes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "links ในบริบทของ React Router",
+          "parameters ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "links เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Router",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ React Router อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "routes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "links ที่ไม่เกี่ยวกับโจทย์นี้",
+          "parameters ในบริบทของ React Router",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "parameters เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Router",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท React Router? (ข้อ 4)",
+        "choices": [
+          "routes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "links ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "nested routing ในบริบทของ React Router"
+        ],
+        "correctIndex": 3,
+        "explanation": "nested routing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Router",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ React Router และเป้าหมายเรื่อง routes? (ข้อ 5)",
+        "choices": [
+          "routes ในบริบทของ React Router",
+          "links ที่ไม่เกี่ยวกับโจทย์นี้",
+          "parameters ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "routes เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Router",
+        "points": 22
+      }
+    ]
+  },
+  "2026-08-19": {
+    "title": "React Context API",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ React Context API มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "providers ในบริบทของ React Context API",
+          "consumers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "shared state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "providers เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Context API",
+        "points": 24
+      },
+      {
+        "prompt": "หากกำลังทบทวน React Context API แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "providers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "consumers ในบริบทของ React Context API",
+          "shared state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "consumers เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Context API",
+        "points": 24
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ React Context API อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "providers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "consumers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "shared state ในบริบทของ React Context API",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "shared state เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Context API",
+        "points": 24
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท React Context API? (ข้อ 4)",
+        "choices": [
+          "providers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "consumers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "context trade-offs ในบริบทของ React Context API"
+        ],
+        "correctIndex": 3,
+        "explanation": "context trade-offs เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Context API",
+        "points": 24
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ React Context API และเป้าหมายเรื่อง providers? (ข้อ 5)",
+        "choices": [
+          "providers ในบริบทของ React Context API",
+          "consumers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "shared state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "providers เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Context API",
+        "points": 24
+      }
+    ]
+  },
+  "2026-08-20": {
+    "title": "Axios & Web Integration",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Axios & Web Integration มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "HTTP methods ในบริบทของ Axios & Web Integration",
+          "requests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "responses ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "HTTP methods เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Axios & Web Integration",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน Axios & Web Integration แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "HTTP methods ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requests ในบริบทของ Axios & Web Integration",
+          "responses ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "requests เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Axios & Web Integration",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Axios & Web Integration อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "HTTP methods ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "responses ในบริบทของ Axios & Web Integration",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "responses เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Axios & Web Integration",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Axios & Web Integration? (ข้อ 4)",
+        "choices": [
+          "HTTP methods ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "errors ในบริบทของ Axios & Web Integration"
+        ],
+        "correctIndex": 3,
+        "explanation": "errors เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Axios & Web Integration",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Axios & Web Integration และเป้าหมายเรื่อง API integration? (ข้อ 5)",
+        "choices": [
+          "API integration ในบริบทของ Axios & Web Integration",
+          "HTTP methods ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "API integration เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Axios & Web Integration",
+        "points": 26
+      }
+    ]
+  },
+  "2026-08-21": {
+    "title": "Week 8 JavaScript & React Assessment",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 8 JavaScript & React Assessment มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "useEffect ในบริบทของ Week 8 JavaScript & React Assessment",
+          "React Router ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Context API ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "useEffect เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 8 JavaScript & React Assessment แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "useEffect ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React Router ในบริบทของ Week 8 JavaScript & React Assessment",
+          "Context API ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "React Router เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 8 JavaScript & React Assessment อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "useEffect ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React Router ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Context API ในบริบทของ Week 8 JavaScript & React Assessment",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "Context API เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 8 JavaScript & React Assessment? (ข้อ 4)",
+        "choices": [
+          "useEffect ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React Router ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "Axios ในบริบทของ Week 8 JavaScript & React Assessment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Axios เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 8 JavaScript & React Assessment และเป้าหมายเรื่อง communication practicum? (ข้อ 5)",
+        "choices": [
+          "communication practicum ในบริบทของ Week 8 JavaScript & React Assessment",
+          "useEffect ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React Router ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "communication practicum เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 8 JavaScript & React Assessment มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "React Router ที่ไม่เกี่ยวกับโจทย์นี้",
+          "useEffect ในบริบทของ Week 8 JavaScript & React Assessment",
+          "Context API ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "useEffect เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 8 JavaScript & React Assessment แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "useEffect ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Context API ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React Router ในบริบทของ Week 8 JavaScript & React Assessment",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "React Router เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 8 JavaScript & React Assessment อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "useEffect ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React Router ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "Context API ในบริบทของ Week 8 JavaScript & React Assessment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Context API เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 8 JavaScript & React Assessment? (ข้อ 9)",
+        "choices": [
+          "Axios ในบริบทของ Week 8 JavaScript & React Assessment",
+          "useEffect ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React Router ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "Axios เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 8 JavaScript & React Assessment และเป้าหมายเรื่อง communication practicum? (ข้อ 10)",
+        "choices": [
+          "useEffect ที่ไม่เกี่ยวกับโจทย์นี้",
+          "communication practicum ในบริบทของ Week 8 JavaScript & React Assessment",
+          "React Router ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "communication practicum เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 8 JavaScript & React Assessment",
+        "points": 30
+      }
+    ]
+  },
+  "2026-08-24": {
+    "title": "React Optimization",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ React Optimization มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "memoization ในบริบทของ React Optimization",
+          "rendering ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React.memo ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "memoization เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Optimization",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน React Optimization แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "memoization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "rendering ในบริบทของ React Optimization",
+          "React.memo ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "rendering เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Optimization",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ React Optimization อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "memoization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "rendering ที่ไม่เกี่ยวกับโจทย์นี้",
+          "React.memo ในบริบทของ React Optimization",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "React.memo เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Optimization",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท React Optimization? (ข้อ 4)",
+        "choices": [
+          "memoization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "rendering ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "useMemo ในบริบทของ React Optimization"
+        ],
+        "correctIndex": 3,
+        "explanation": "useMemo เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Optimization",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ React Optimization และเป้าหมายเรื่อง useCallback? (ข้อ 5)",
+        "choices": [
+          "useCallback ในบริบทของ React Optimization",
+          "memoization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "rendering ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "useCallback เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Optimization",
+        "points": 20
+      }
+    ]
+  },
+  "2026-08-25": {
+    "title": "React Recap & Debugging",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ React Recap & Debugging มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "state ในบริบทของ React Recap & Debugging",
+          "effects ที่ไม่เกี่ยวกับโจทย์นี้",
+          "routing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "state เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Recap & Debugging",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน React Recap & Debugging แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "effects ในบริบทของ React Recap & Debugging",
+          "routing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "effects เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Recap & Debugging",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ React Recap & Debugging อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "effects ที่ไม่เกี่ยวกับโจทย์นี้",
+          "routing ในบริบทของ React Recap & Debugging",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "routing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Recap & Debugging",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท React Recap & Debugging? (ข้อ 4)",
+        "choices": [
+          "state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "effects ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "debugging patterns ในบริบทของ React Recap & Debugging"
+        ],
+        "correctIndex": 3,
+        "explanation": "debugging patterns เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Recap & Debugging",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ React Recap & Debugging และเป้าหมายเรื่อง state? (ข้อ 5)",
+        "choices": [
+          "state ในบริบทของ React Recap & Debugging",
+          "effects ที่ไม่เกี่ยวกับโจทย์นี้",
+          "routing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "state เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ React Recap & Debugging",
+        "points": 22
+      }
+    ]
+  },
+  "2026-08-26": {
+    "title": "Sprint 2 Project Practices",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Sprint 2 Project Practices มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "user stories ในบริบทของ Sprint 2 Project Practices",
+          "task breakdown ที่ไม่เกี่ยวกับโจทย์นี้",
+          "definition of done ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "user stories เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 2 Project Practices",
+        "points": 24
+      },
+      {
+        "prompt": "หากกำลังทบทวน Sprint 2 Project Practices แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "user stories ที่ไม่เกี่ยวกับโจทย์นี้",
+          "task breakdown ในบริบทของ Sprint 2 Project Practices",
+          "definition of done ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "task breakdown เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 2 Project Practices",
+        "points": 24
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Sprint 2 Project Practices อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "user stories ที่ไม่เกี่ยวกับโจทย์นี้",
+          "task breakdown ที่ไม่เกี่ยวกับโจทย์นี้",
+          "definition of done ในบริบทของ Sprint 2 Project Practices",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "definition of done เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 2 Project Practices",
+        "points": 24
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Sprint 2 Project Practices? (ข้อ 4)",
+        "choices": [
+          "user stories ที่ไม่เกี่ยวกับโจทย์นี้",
+          "task breakdown ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "Git collaboration ในบริบทของ Sprint 2 Project Practices"
+        ],
+        "correctIndex": 3,
+        "explanation": "Git collaboration เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 2 Project Practices",
+        "points": 24
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Sprint 2 Project Practices และเป้าหมายเรื่อง user stories? (ข้อ 5)",
+        "choices": [
+          "user stories ในบริบทของ Sprint 2 Project Practices",
+          "task breakdown ที่ไม่เกี่ยวกับโจทย์นี้",
+          "definition of done ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "user stories เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 2 Project Practices",
+        "points": 24
+      }
+    ]
+  },
+  "2026-08-27": {
+    "title": "Async Integration in React",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Async Integration in React มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "loading state ในบริบทของ Async Integration in React",
+          "error state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "race conditions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "loading state เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Async Integration in React",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน Async Integration in React แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "loading state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "error state ในบริบทของ Async Integration in React",
+          "race conditions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "error state เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Async Integration in React",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Async Integration in React อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "loading state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "error state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "race conditions ในบริบทของ Async Integration in React",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "race conditions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Async Integration in React",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Async Integration in React? (ข้อ 4)",
+        "choices": [
+          "loading state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "error state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "API flows ในบริบทของ Async Integration in React"
+        ],
+        "correctIndex": 3,
+        "explanation": "API flows เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Async Integration in React",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Async Integration in React และเป้าหมายเรื่อง loading state? (ข้อ 5)",
+        "choices": [
+          "loading state ในบริบทของ Async Integration in React",
+          "error state ที่ไม่เกี่ยวกับโจทย์นี้",
+          "race conditions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "loading state เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Async Integration in React",
+        "points": 26
+      }
+    ]
+  },
+  "2026-08-28": {
+    "title": "Week 9 Final: React Project Readiness",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 9 Final: React Project Readiness มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "optimization ในบริบทของ Week 9 Final: React Project Readiness",
+          "debugging ที่ไม่เกี่ยวกับโจทย์นี้",
+          "project workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "optimization เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 9 Final: React Project Readiness แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "optimization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "debugging ในบริบทของ Week 9 Final: React Project Readiness",
+          "project workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "debugging เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 9 Final: React Project Readiness อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "optimization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "debugging ที่ไม่เกี่ยวกับโจทย์นี้",
+          "project workflow ในบริบทของ Week 9 Final: React Project Readiness",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "project workflow เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 9 Final: React Project Readiness? (ข้อ 4)",
+        "choices": [
+          "optimization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "debugging ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "async integration ในบริบทของ Week 9 Final: React Project Readiness"
+        ],
+        "correctIndex": 3,
+        "explanation": "async integration เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 9 Final: React Project Readiness และเป้าหมายเรื่อง BSM challenge? (ข้อ 5)",
+        "choices": [
+          "BSM challenge ในบริบทของ Week 9 Final: React Project Readiness",
+          "optimization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "debugging ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "BSM challenge เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 9 Final: React Project Readiness มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "debugging ที่ไม่เกี่ยวกับโจทย์นี้",
+          "optimization ในบริบทของ Week 9 Final: React Project Readiness",
+          "project workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "optimization เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 9 Final: React Project Readiness แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "optimization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "project workflow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "debugging ในบริบทของ Week 9 Final: React Project Readiness",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "debugging เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 9 Final: React Project Readiness อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "optimization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "debugging ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "project workflow ในบริบทของ Week 9 Final: React Project Readiness"
+        ],
+        "correctIndex": 3,
+        "explanation": "project workflow เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 9 Final: React Project Readiness? (ข้อ 9)",
+        "choices": [
+          "async integration ในบริบทของ Week 9 Final: React Project Readiness",
+          "optimization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "debugging ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "async integration เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 9 Final: React Project Readiness และเป้าหมายเรื่อง BSM challenge? (ข้อ 10)",
+        "choices": [
+          "optimization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "BSM challenge ในบริบทของ Week 9 Final: React Project Readiness",
+          "debugging ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "BSM challenge เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 9 Final: React Project Readiness",
+        "points": 30
+      }
+    ]
+  },
+  "2026-08-31": {
+    "title": "Backend Systems & API Design",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Backend Systems & API Design มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "client-server ในบริบทของ Backend Systems & API Design",
+          "REST ที่ไม่เกี่ยวกับโจทย์นี้",
+          "resources ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "client-server เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Systems & API Design",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน Backend Systems & API Design แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "client-server ที่ไม่เกี่ยวกับโจทย์นี้",
+          "REST ในบริบทของ Backend Systems & API Design",
+          "resources ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "REST เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Systems & API Design",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Backend Systems & API Design อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "client-server ที่ไม่เกี่ยวกับโจทย์นี้",
+          "REST ที่ไม่เกี่ยวกับโจทย์นี้",
+          "resources ในบริบทของ Backend Systems & API Design",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "resources เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Systems & API Design",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Backend Systems & API Design? (ข้อ 4)",
+        "choices": [
+          "client-server ที่ไม่เกี่ยวกับโจทย์นี้",
+          "REST ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "status codes ในบริบทของ Backend Systems & API Design"
+        ],
+        "correctIndex": 3,
+        "explanation": "status codes เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Systems & API Design",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Backend Systems & API Design และเป้าหมายเรื่อง client-server? (ข้อ 5)",
+        "choices": [
+          "client-server ในบริบทของ Backend Systems & API Design",
+          "REST ที่ไม่เกี่ยวกับโจทย์นี้",
+          "resources ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "client-server เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Systems & API Design",
+        "points": 20
+      }
+    ]
+  },
+  "2026-09-01": {
+    "title": "Node.js Fundamentals",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Node.js Fundamentals มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "runtime ในบริบทของ Node.js Fundamentals",
+          "modules ที่ไม่เกี่ยวกับโจทย์นี้",
+          "npm ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "runtime เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Node.js Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน Node.js Fundamentals แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "runtime ที่ไม่เกี่ยวกับโจทย์นี้",
+          "modules ในบริบทของ Node.js Fundamentals",
+          "npm ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "modules เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Node.js Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Node.js Fundamentals อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "runtime ที่ไม่เกี่ยวกับโจทย์นี้",
+          "modules ที่ไม่เกี่ยวกับโจทย์นี้",
+          "npm ในบริบทของ Node.js Fundamentals",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "npm เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Node.js Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Node.js Fundamentals? (ข้อ 4)",
+        "choices": [
+          "runtime ที่ไม่เกี่ยวกับโจทย์นี้",
+          "modules ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "environment variables ในบริบทของ Node.js Fundamentals"
+        ],
+        "correctIndex": 3,
+        "explanation": "environment variables เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Node.js Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Node.js Fundamentals และเป้าหมายเรื่อง runtime? (ข้อ 5)",
+        "choices": [
+          "runtime ในบริบทของ Node.js Fundamentals",
+          "modules ที่ไม่เกี่ยวกับโจทย์นี้",
+          "npm ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "runtime เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Node.js Fundamentals",
+        "points": 22
+      }
+    ]
+  },
+  "2026-09-02": {
+    "title": "Express.js Fundamentals",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Express.js Fundamentals มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "routes ในบริบทของ Express.js Fundamentals",
+          "request ที่ไม่เกี่ยวกับโจทย์นี้",
+          "response ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "routes เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Express.js Fundamentals",
+        "points": 24
+      },
+      {
+        "prompt": "หากกำลังทบทวน Express.js Fundamentals แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "routes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "request ในบริบทของ Express.js Fundamentals",
+          "response ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "request เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Express.js Fundamentals",
+        "points": 24
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Express.js Fundamentals อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "routes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "request ที่ไม่เกี่ยวกับโจทย์นี้",
+          "response ในบริบทของ Express.js Fundamentals",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "response เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Express.js Fundamentals",
+        "points": 24
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Express.js Fundamentals? (ข้อ 4)",
+        "choices": [
+          "routes ที่ไม่เกี่ยวกับโจทย์นี้",
+          "request ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "route parameters ในบริบทของ Express.js Fundamentals"
+        ],
+        "correctIndex": 3,
+        "explanation": "route parameters เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Express.js Fundamentals",
+        "points": 24
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Express.js Fundamentals และเป้าหมายเรื่อง routes? (ข้อ 5)",
+        "choices": [
+          "routes ในบริบทของ Express.js Fundamentals",
+          "request ที่ไม่เกี่ยวกับโจทย์นี้",
+          "response ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "routes เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Express.js Fundamentals",
+        "points": 24
+      }
+    ]
+  },
+  "2026-09-03": {
+    "title": "Middleware & Error Handling",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Middleware & Error Handling มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "middleware chain ในบริบทของ Middleware & Error Handling",
+          "next ที่ไม่เกี่ยวกับโจทย์นี้",
+          "validation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "middleware chain เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Middleware & Error Handling",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน Middleware & Error Handling แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "middleware chain ที่ไม่เกี่ยวกับโจทย์นี้",
+          "next ในบริบทของ Middleware & Error Handling",
+          "validation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "next เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Middleware & Error Handling",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Middleware & Error Handling อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "middleware chain ที่ไม่เกี่ยวกับโจทย์นี้",
+          "next ที่ไม่เกี่ยวกับโจทย์นี้",
+          "validation ในบริบทของ Middleware & Error Handling",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "validation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Middleware & Error Handling",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Middleware & Error Handling? (ข้อ 4)",
+        "choices": [
+          "middleware chain ที่ไม่เกี่ยวกับโจทย์นี้",
+          "next ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "error middleware ในบริบทของ Middleware & Error Handling"
+        ],
+        "correctIndex": 3,
+        "explanation": "error middleware เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Middleware & Error Handling",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Middleware & Error Handling และเป้าหมายเรื่อง middleware chain? (ข้อ 5)",
+        "choices": [
+          "middleware chain ในบริบทของ Middleware & Error Handling",
+          "next ที่ไม่เกี่ยวกับโจทย์นี้",
+          "validation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "middleware chain เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Middleware & Error Handling",
+        "points": 26
+      }
+    ]
+  },
+  "2026-09-04": {
+    "title": "Week 10 Final: Backend Introduction",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 10 Final: Backend Introduction มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "API design ในบริบทของ Week 10 Final: Backend Introduction",
+          "Node.js ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Express ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "API design เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 10 Final: Backend Introduction แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "API design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Node.js ในบริบทของ Week 10 Final: Backend Introduction",
+          "Express ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "Node.js เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 10 Final: Backend Introduction อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "API design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Node.js ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Express ในบริบทของ Week 10 Final: Backend Introduction",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "Express เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 10 Final: Backend Introduction? (ข้อ 4)",
+        "choices": [
+          "API design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Node.js ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "middleware ในบริบทของ Week 10 Final: Backend Introduction"
+        ],
+        "correctIndex": 3,
+        "explanation": "middleware เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 10 Final: Backend Introduction และเป้าหมายเรื่อง error handling? (ข้อ 5)",
+        "choices": [
+          "error handling ในบริบทของ Week 10 Final: Backend Introduction",
+          "API design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Node.js ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "error handling เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 10 Final: Backend Introduction มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "Node.js ที่ไม่เกี่ยวกับโจทย์นี้",
+          "API design ในบริบทของ Week 10 Final: Backend Introduction",
+          "Express ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "API design เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 10 Final: Backend Introduction แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "API design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Express ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Node.js ในบริบทของ Week 10 Final: Backend Introduction",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "Node.js เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 10 Final: Backend Introduction อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "API design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Node.js ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "Express ในบริบทของ Week 10 Final: Backend Introduction"
+        ],
+        "correctIndex": 3,
+        "explanation": "Express เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 10 Final: Backend Introduction? (ข้อ 9)",
+        "choices": [
+          "middleware ในบริบทของ Week 10 Final: Backend Introduction",
+          "API design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Node.js ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "middleware เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 10 Final: Backend Introduction และเป้าหมายเรื่อง error handling? (ข้อ 10)",
+        "choices": [
+          "API design ที่ไม่เกี่ยวกับโจทย์นี้",
+          "error handling ในบริบทของ Week 10 Final: Backend Introduction",
+          "Node.js ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "error handling เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 10 Final: Backend Introduction",
+        "points": 30
+      }
+    ]
+  },
+  "2026-09-07": {
+    "title": "Backend Error Handling",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Backend Error Handling มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "operational errors ในบริบทของ Backend Error Handling",
+          "HTTP errors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "central handlers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "operational errors เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Error Handling",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน Backend Error Handling แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "operational errors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "HTTP errors ในบริบทของ Backend Error Handling",
+          "central handlers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "HTTP errors เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Error Handling",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Backend Error Handling อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "operational errors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "HTTP errors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "central handlers ในบริบทของ Backend Error Handling",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "central handlers เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Error Handling",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Backend Error Handling? (ข้อ 4)",
+        "choices": [
+          "operational errors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "HTTP errors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "logging ในบริบทของ Backend Error Handling"
+        ],
+        "correctIndex": 3,
+        "explanation": "logging เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Error Handling",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Backend Error Handling และเป้าหมายเรื่อง operational errors? (ข้อ 5)",
+        "choices": [
+          "operational errors ในบริบทของ Backend Error Handling",
+          "HTTP errors ที่ไม่เกี่ยวกับโจทย์นี้",
+          "central handlers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "operational errors เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Backend Error Handling",
+        "points": 20
+      }
+    ]
+  },
+  "2026-09-08": {
+    "title": "MongoDB & Mongoose",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ MongoDB & Mongoose มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "documents ในบริบทของ MongoDB & Mongoose",
+          "schemas ที่ไม่เกี่ยวกับโจทย์นี้",
+          "models ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "documents เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ MongoDB & Mongoose",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน MongoDB & Mongoose แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "documents ที่ไม่เกี่ยวกับโจทย์นี้",
+          "schemas ในบริบทของ MongoDB & Mongoose",
+          "models ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "schemas เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ MongoDB & Mongoose",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ MongoDB & Mongoose อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "documents ที่ไม่เกี่ยวกับโจทย์นี้",
+          "schemas ที่ไม่เกี่ยวกับโจทย์นี้",
+          "models ในบริบทของ MongoDB & Mongoose",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "models เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ MongoDB & Mongoose",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท MongoDB & Mongoose? (ข้อ 4)",
+        "choices": [
+          "documents ที่ไม่เกี่ยวกับโจทย์นี้",
+          "schemas ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "queries ในบริบทของ MongoDB & Mongoose"
+        ],
+        "correctIndex": 3,
+        "explanation": "queries เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ MongoDB & Mongoose",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ MongoDB & Mongoose และเป้าหมายเรื่อง validation? (ข้อ 5)",
+        "choices": [
+          "validation ในบริบทของ MongoDB & Mongoose",
+          "documents ที่ไม่เกี่ยวกับโจทย์นี้",
+          "schemas ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "validation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ MongoDB & Mongoose",
+        "points": 22
+      }
+    ]
+  },
+  "2026-09-09": {
+    "title": "PostgreSQL Integration",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ PostgreSQL Integration มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "SQL queries ในบริบทของ PostgreSQL Integration",
+          "relationships ที่ไม่เกี่ยวกับโจทย์นี้",
+          "parameters ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "SQL queries เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ PostgreSQL Integration",
+        "points": 24
+      },
+      {
+        "prompt": "หากกำลังทบทวน PostgreSQL Integration แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "SQL queries ที่ไม่เกี่ยวกับโจทย์นี้",
+          "relationships ในบริบทของ PostgreSQL Integration",
+          "parameters ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "relationships เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ PostgreSQL Integration",
+        "points": 24
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ PostgreSQL Integration อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "SQL queries ที่ไม่เกี่ยวกับโจทย์นี้",
+          "relationships ที่ไม่เกี่ยวกับโจทย์นี้",
+          "parameters ในบริบทของ PostgreSQL Integration",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "parameters เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ PostgreSQL Integration",
+        "points": 24
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท PostgreSQL Integration? (ข้อ 4)",
+        "choices": [
+          "SQL queries ที่ไม่เกี่ยวกับโจทย์นี้",
+          "relationships ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "database integration ในบริบทของ PostgreSQL Integration"
+        ],
+        "correctIndex": 3,
+        "explanation": "database integration เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ PostgreSQL Integration",
+        "points": 24
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ PostgreSQL Integration และเป้าหมายเรื่อง SQL queries? (ข้อ 5)",
+        "choices": [
+          "SQL queries ในบริบทของ PostgreSQL Integration",
+          "relationships ที่ไม่เกี่ยวกับโจทย์นี้",
+          "parameters ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "SQL queries เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ PostgreSQL Integration",
+        "points": 24
+      }
+    ]
+  },
+  "2026-09-10": {
+    "title": "Docker & Deployment",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Docker & Deployment มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "images ในบริบทของ Docker & Deployment",
+          "containers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Dockerfile ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "images เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Docker & Deployment",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน Docker & Deployment แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "images ที่ไม่เกี่ยวกับโจทย์นี้",
+          "containers ในบริบทของ Docker & Deployment",
+          "Dockerfile ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "containers เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Docker & Deployment",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Docker & Deployment อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "images ที่ไม่เกี่ยวกับโจทย์นี้",
+          "containers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "Dockerfile ในบริบทของ Docker & Deployment",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dockerfile เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Docker & Deployment",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Docker & Deployment? (ข้อ 4)",
+        "choices": [
+          "images ที่ไม่เกี่ยวกับโจทย์นี้",
+          "containers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "ports ในบริบทของ Docker & Deployment"
+        ],
+        "correctIndex": 3,
+        "explanation": "ports เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Docker & Deployment",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Docker & Deployment และเป้าหมายเรื่อง environment configuration? (ข้อ 5)",
+        "choices": [
+          "environment configuration ในบริบทของ Docker & Deployment",
+          "images ที่ไม่เกี่ยวกับโจทย์นี้",
+          "containers ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "environment configuration เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Docker & Deployment",
+        "points": 26
+      }
+    ]
+  },
+  "2026-09-11": {
+    "title": "Week 11 Final: Data, Docker & Authentication",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 11 Final: Data, Docker & Authentication มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "error handling ในบริบทของ Week 11 Final: Data, Docker & Authentication",
+          "MongoDB ที่ไม่เกี่ยวกับโจทย์นี้",
+          "PostgreSQL ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "error handling เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 11 Final: Data, Docker & Authentication แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "error handling ที่ไม่เกี่ยวกับโจทย์นี้",
+          "MongoDB ในบริบทของ Week 11 Final: Data, Docker & Authentication",
+          "PostgreSQL ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "MongoDB เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 11 Final: Data, Docker & Authentication อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "error handling ที่ไม่เกี่ยวกับโจทย์นี้",
+          "MongoDB ที่ไม่เกี่ยวกับโจทย์นี้",
+          "PostgreSQL ในบริบทของ Week 11 Final: Data, Docker & Authentication",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "PostgreSQL เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 11 Final: Data, Docker & Authentication? (ข้อ 4)",
+        "choices": [
+          "error handling ที่ไม่เกี่ยวกับโจทย์นี้",
+          "MongoDB ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "Docker ในบริบทของ Week 11 Final: Data, Docker & Authentication"
+        ],
+        "correctIndex": 3,
+        "explanation": "Docker เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 11 Final: Data, Docker & Authentication และเป้าหมายเรื่อง authentication and authorization? (ข้อ 5)",
+        "choices": [
+          "authentication and authorization ในบริบทของ Week 11 Final: Data, Docker & Authentication",
+          "error handling ที่ไม่เกี่ยวกับโจทย์นี้",
+          "MongoDB ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "authentication and authorization เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 11 Final: Data, Docker & Authentication มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "MongoDB ที่ไม่เกี่ยวกับโจทย์นี้",
+          "error handling ในบริบทของ Week 11 Final: Data, Docker & Authentication",
+          "PostgreSQL ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "error handling เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 11 Final: Data, Docker & Authentication แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "error handling ที่ไม่เกี่ยวกับโจทย์นี้",
+          "PostgreSQL ที่ไม่เกี่ยวกับโจทย์นี้",
+          "MongoDB ในบริบทของ Week 11 Final: Data, Docker & Authentication",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "MongoDB เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 11 Final: Data, Docker & Authentication อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "error handling ที่ไม่เกี่ยวกับโจทย์นี้",
+          "MongoDB ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "PostgreSQL ในบริบทของ Week 11 Final: Data, Docker & Authentication"
+        ],
+        "correctIndex": 3,
+        "explanation": "PostgreSQL เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 11 Final: Data, Docker & Authentication? (ข้อ 9)",
+        "choices": [
+          "Docker ในบริบทของ Week 11 Final: Data, Docker & Authentication",
+          "error handling ที่ไม่เกี่ยวกับโจทย์นี้",
+          "MongoDB ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "Docker เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 11 Final: Data, Docker & Authentication และเป้าหมายเรื่อง authentication and authorization? (ข้อ 10)",
+        "choices": [
+          "error handling ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authentication and authorization ในบริบทของ Week 11 Final: Data, Docker & Authentication",
+          "MongoDB ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "authentication and authorization เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 11 Final: Data, Docker & Authentication",
+        "points": 30
+      }
+    ]
+  },
+  "2026-09-14": {
+    "title": "Authentication & Authorization",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Authentication & Authorization มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "identity ในบริบทของ Authentication & Authorization",
+          "permissions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "sessions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "identity เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Authentication & Authorization",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน Authentication & Authorization แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "identity ที่ไม่เกี่ยวกับโจทย์นี้",
+          "permissions ในบริบทของ Authentication & Authorization",
+          "sessions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "permissions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Authentication & Authorization",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Authentication & Authorization อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "identity ที่ไม่เกี่ยวกับโจทย์นี้",
+          "permissions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "sessions ในบริบทของ Authentication & Authorization",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "sessions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Authentication & Authorization",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Authentication & Authorization? (ข้อ 4)",
+        "choices": [
+          "identity ที่ไม่เกี่ยวกับโจทย์นี้",
+          "permissions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "tokens ในบริบทของ Authentication & Authorization"
+        ],
+        "correctIndex": 3,
+        "explanation": "tokens เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Authentication & Authorization",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Authentication & Authorization และเป้าหมายเรื่อง role-based access? (ข้อ 5)",
+        "choices": [
+          "role-based access ในบริบทของ Authentication & Authorization",
+          "identity ที่ไม่เกี่ยวกับโจทย์นี้",
+          "permissions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "role-based access เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Authentication & Authorization",
+        "points": 20
+      }
+    ]
+  },
+  "2026-09-15": {
+    "title": "Testing Fundamentals",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Testing Fundamentals มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "unit tests ในบริบทของ Testing Fundamentals",
+          "integration tests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "assertions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "unit tests เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Testing Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน Testing Fundamentals แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "unit tests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "integration tests ในบริบทของ Testing Fundamentals",
+          "assertions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "integration tests เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Testing Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Testing Fundamentals อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "unit tests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "integration tests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "assertions ในบริบทของ Testing Fundamentals",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "assertions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Testing Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Testing Fundamentals? (ข้อ 4)",
+        "choices": [
+          "unit tests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "integration tests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "test cases ในบริบทของ Testing Fundamentals"
+        ],
+        "correctIndex": 3,
+        "explanation": "test cases เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Testing Fundamentals",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Testing Fundamentals และเป้าหมายเรื่อง unit tests? (ข้อ 5)",
+        "choices": [
+          "unit tests ในบริบทของ Testing Fundamentals",
+          "integration tests ที่ไม่เกี่ยวกับโจทย์นี้",
+          "assertions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "unit tests เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Testing Fundamentals",
+        "points": 22
+      }
+    ]
+  },
+  "2026-09-16": {
+    "title": "API Testing",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ API Testing มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "request testing ในบริบทของ API Testing",
+          "status assertions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "mocking ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "request testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ API Testing",
+        "points": 24
+      },
+      {
+        "prompt": "หากกำลังทบทวน API Testing แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "request testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "status assertions ในบริบทของ API Testing",
+          "mocking ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "status assertions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ API Testing",
+        "points": 24
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ API Testing อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "request testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "status assertions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "mocking ในบริบทของ API Testing",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "mocking เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ API Testing",
+        "points": 24
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท API Testing? (ข้อ 4)",
+        "choices": [
+          "request testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "status assertions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "test database ในบริบทของ API Testing"
+        ],
+        "correctIndex": 3,
+        "explanation": "test database เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ API Testing",
+        "points": 24
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ API Testing และเป้าหมายเรื่อง request testing? (ข้อ 5)",
+        "choices": [
+          "request testing ในบริบทของ API Testing",
+          "status assertions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "mocking ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "request testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ API Testing",
+        "points": 24
+      }
+    ]
+  },
+  "2026-09-17": {
+    "title": "Sprint 3 Quality & Delivery",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Sprint 3 Quality & Delivery มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "acceptance criteria ในบริบทของ Sprint 3 Quality & Delivery",
+          "regression testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "code review ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "acceptance criteria เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 3 Quality & Delivery",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน Sprint 3 Quality & Delivery แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "acceptance criteria ที่ไม่เกี่ยวกับโจทย์นี้",
+          "regression testing ในบริบทของ Sprint 3 Quality & Delivery",
+          "code review ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "regression testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 3 Quality & Delivery",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Sprint 3 Quality & Delivery อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "acceptance criteria ที่ไม่เกี่ยวกับโจทย์นี้",
+          "regression testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "code review ในบริบทของ Sprint 3 Quality & Delivery",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "code review เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 3 Quality & Delivery",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Sprint 3 Quality & Delivery? (ข้อ 4)",
+        "choices": [
+          "acceptance criteria ที่ไม่เกี่ยวกับโจทย์นี้",
+          "regression testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "release readiness ในบริบทของ Sprint 3 Quality & Delivery"
+        ],
+        "correctIndex": 3,
+        "explanation": "release readiness เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 3 Quality & Delivery",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Sprint 3 Quality & Delivery และเป้าหมายเรื่อง acceptance criteria? (ข้อ 5)",
+        "choices": [
+          "acceptance criteria ในบริบทของ Sprint 3 Quality & Delivery",
+          "regression testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "code review ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "acceptance criteria เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Sprint 3 Quality & Delivery",
+        "points": 26
+      }
+    ]
+  },
+  "2026-09-18": {
+    "title": "Week 12 Final: Secure & Tested Backend",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 12 Final: Secure & Tested Backend มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "authentication ในบริบทของ Week 12 Final: Secure & Tested Backend",
+          "authorization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "authentication เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 12 Final: Secure & Tested Backend แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "authentication ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authorization ในบริบทของ Week 12 Final: Secure & Tested Backend",
+          "testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "authorization เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 12 Final: Secure & Tested Backend อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "authentication ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authorization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "testing ในบริบทของ Week 12 Final: Secure & Tested Backend",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 12 Final: Secure & Tested Backend? (ข้อ 4)",
+        "choices": [
+          "authentication ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authorization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "API testing ในบริบทของ Week 12 Final: Secure & Tested Backend"
+        ],
+        "correctIndex": 3,
+        "explanation": "API testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 12 Final: Secure & Tested Backend และเป้าหมายเรื่อง project quality? (ข้อ 5)",
+        "choices": [
+          "project quality ในบริบทของ Week 12 Final: Secure & Tested Backend",
+          "authentication ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authorization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "project quality เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 12 Final: Secure & Tested Backend มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "authorization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authentication ในบริบทของ Week 12 Final: Secure & Tested Backend",
+          "testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "authentication เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 12 Final: Secure & Tested Backend แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "authentication ที่ไม่เกี่ยวกับโจทย์นี้",
+          "testing ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authorization ในบริบทของ Week 12 Final: Secure & Tested Backend",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "authorization เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 12 Final: Secure & Tested Backend อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "authentication ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authorization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "testing ในบริบทของ Week 12 Final: Secure & Tested Backend"
+        ],
+        "correctIndex": 3,
+        "explanation": "testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 12 Final: Secure & Tested Backend? (ข้อ 9)",
+        "choices": [
+          "API testing ในบริบทของ Week 12 Final: Secure & Tested Backend",
+          "authentication ที่ไม่เกี่ยวกับโจทย์นี้",
+          "authorization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "API testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 12 Final: Secure & Tested Backend และเป้าหมายเรื่อง project quality? (ข้อ 10)",
+        "choices": [
+          "authentication ที่ไม่เกี่ยวกับโจทย์นี้",
+          "project quality ในบริบทของ Week 12 Final: Secure & Tested Backend",
+          "authorization ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "project quality เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 12 Final: Secure & Tested Backend",
+        "points": 30
+      }
+    ]
+  },
+  "2026-09-21": {
+    "title": "Final Sprint Planning",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Final Sprint Planning มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "scope ในบริบทของ Final Sprint Planning",
+          "priorities ที่ไม่เกี่ยวกับโจทย์นี้",
+          "risk ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "scope เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Final Sprint Planning",
+        "points": 20
+      },
+      {
+        "prompt": "หากกำลังทบทวน Final Sprint Planning แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "scope ที่ไม่เกี่ยวกับโจทย์นี้",
+          "priorities ในบริบทของ Final Sprint Planning",
+          "risk ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "priorities เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Final Sprint Planning",
+        "points": 20
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Final Sprint Planning อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "scope ที่ไม่เกี่ยวกับโจทย์นี้",
+          "priorities ที่ไม่เกี่ยวกับโจทย์นี้",
+          "risk ในบริบทของ Final Sprint Planning",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "risk เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Final Sprint Planning",
+        "points": 20
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Final Sprint Planning? (ข้อ 4)",
+        "choices": [
+          "scope ที่ไม่เกี่ยวกับโจทย์นี้",
+          "priorities ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "task ownership ในบริบทของ Final Sprint Planning"
+        ],
+        "correctIndex": 3,
+        "explanation": "task ownership เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Final Sprint Planning",
+        "points": 20
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Final Sprint Planning และเป้าหมายเรื่อง scope? (ข้อ 5)",
+        "choices": [
+          "scope ในบริบทของ Final Sprint Planning",
+          "priorities ที่ไม่เกี่ยวกับโจทย์นี้",
+          "risk ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "scope เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Final Sprint Planning",
+        "points": 20
+      }
+    ]
+  },
+  "2026-09-22": {
+    "title": "Requirements & Acceptance Criteria",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Requirements & Acceptance Criteria มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "functional requirements ในบริบทของ Requirements & Acceptance Criteria",
+          "non-functional requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "user stories ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "functional requirements เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Requirements & Acceptance Criteria",
+        "points": 22
+      },
+      {
+        "prompt": "หากกำลังทบทวน Requirements & Acceptance Criteria แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "functional requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "non-functional requirements ในบริบทของ Requirements & Acceptance Criteria",
+          "user stories ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "non-functional requirements เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Requirements & Acceptance Criteria",
+        "points": 22
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Requirements & Acceptance Criteria อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "functional requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "non-functional requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "user stories ในบริบทของ Requirements & Acceptance Criteria",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "user stories เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Requirements & Acceptance Criteria",
+        "points": 22
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Requirements & Acceptance Criteria? (ข้อ 4)",
+        "choices": [
+          "functional requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "non-functional requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "acceptance tests ในบริบทของ Requirements & Acceptance Criteria"
+        ],
+        "correctIndex": 3,
+        "explanation": "acceptance tests เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Requirements & Acceptance Criteria",
+        "points": 22
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Requirements & Acceptance Criteria และเป้าหมายเรื่อง functional requirements? (ข้อ 5)",
+        "choices": [
+          "functional requirements ในบริบทของ Requirements & Acceptance Criteria",
+          "non-functional requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "user stories ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "functional requirements เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Requirements & Acceptance Criteria",
+        "points": 22
+      }
+    ]
+  },
+  "2026-09-23": {
+    "title": "Code Review & Git Release Workflow",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Code Review & Git Release Workflow มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "review comments ในบริบทของ Code Review & Git Release Workflow",
+          "branch protection ที่ไม่เกี่ยวกับโจทย์นี้",
+          "merge strategy ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "review comments เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Code Review & Git Release Workflow",
+        "points": 24
+      },
+      {
+        "prompt": "หากกำลังทบทวน Code Review & Git Release Workflow แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "review comments ที่ไม่เกี่ยวกับโจทย์นี้",
+          "branch protection ในบริบทของ Code Review & Git Release Workflow",
+          "merge strategy ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "branch protection เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Code Review & Git Release Workflow",
+        "points": 24
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Code Review & Git Release Workflow อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "review comments ที่ไม่เกี่ยวกับโจทย์นี้",
+          "branch protection ที่ไม่เกี่ยวกับโจทย์นี้",
+          "merge strategy ในบริบทของ Code Review & Git Release Workflow",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "merge strategy เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Code Review & Git Release Workflow",
+        "points": 24
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Code Review & Git Release Workflow? (ข้อ 4)",
+        "choices": [
+          "review comments ที่ไม่เกี่ยวกับโจทย์นี้",
+          "branch protection ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "release preparation ในบริบทของ Code Review & Git Release Workflow"
+        ],
+        "correctIndex": 3,
+        "explanation": "release preparation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Code Review & Git Release Workflow",
+        "points": 24
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Code Review & Git Release Workflow และเป้าหมายเรื่อง review comments? (ข้อ 5)",
+        "choices": [
+          "review comments ในบริบทของ Code Review & Git Release Workflow",
+          "branch protection ที่ไม่เกี่ยวกับโจทย์นี้",
+          "merge strategy ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "review comments เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Code Review & Git Release Workflow",
+        "points": 24
+      }
+    ]
+  },
+  "2026-09-24": {
+    "title": "Technical Presentation & Demo Readiness",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Technical Presentation & Demo Readiness มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "architecture explanation ในบริบทของ Technical Presentation & Demo Readiness",
+          "demo flow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "handling questions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "architecture explanation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Technical Presentation & Demo Readiness",
+        "points": 26
+      },
+      {
+        "prompt": "หากกำลังทบทวน Technical Presentation & Demo Readiness แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "architecture explanation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "demo flow ในบริบทของ Technical Presentation & Demo Readiness",
+          "handling questions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "demo flow เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Technical Presentation & Demo Readiness",
+        "points": 26
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Technical Presentation & Demo Readiness อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "architecture explanation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "demo flow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "handling questions ในบริบทของ Technical Presentation & Demo Readiness",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "handling questions เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Technical Presentation & Demo Readiness",
+        "points": 26
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Technical Presentation & Demo Readiness? (ข้อ 4)",
+        "choices": [
+          "architecture explanation ที่ไม่เกี่ยวกับโจทย์นี้",
+          "demo flow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "fallback planning ในบริบทของ Technical Presentation & Demo Readiness"
+        ],
+        "correctIndex": 3,
+        "explanation": "fallback planning เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Technical Presentation & Demo Readiness",
+        "points": 26
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Technical Presentation & Demo Readiness และเป้าหมายเรื่อง architecture explanation? (ข้อ 5)",
+        "choices": [
+          "architecture explanation ในบริบทของ Technical Presentation & Demo Readiness",
+          "demo flow ที่ไม่เกี่ยวกับโจทย์นี้",
+          "handling questions ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "architecture explanation เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Technical Presentation & Demo Readiness",
+        "points": 26
+      }
+    ]
+  },
+  "2026-09-25": {
+    "title": "Week 13 Final: Production Readiness",
+    "questions": [
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 13 Final: Production Readiness มากที่สุด? (ข้อ 1)",
+        "choices": [
+          "planning ในบริบทของ Week 13 Final: Production Readiness",
+          "requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "code review ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "planning เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 13 Final: Production Readiness แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 2)",
+        "choices": [
+          "planning ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requirements ในบริบทของ Week 13 Final: Production Readiness",
+          "code review ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "requirements เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 13 Final: Production Readiness อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 3)",
+        "choices": [
+          "planning ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "code review ในบริบทของ Week 13 Final: Production Readiness",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "code review เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 13 Final: Production Readiness? (ข้อ 4)",
+        "choices": [
+          "planning ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "testing ในบริบทของ Week 13 Final: Production Readiness"
+        ],
+        "correctIndex": 3,
+        "explanation": "testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 13 Final: Production Readiness และเป้าหมายเรื่อง presentation run-through? (ข้อ 5)",
+        "choices": [
+          "presentation run-through ในบริบทของ Week 13 Final: Production Readiness",
+          "planning ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "presentation run-through เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดตรงกับหัวข้อสำคัญของ Week 13 Final: Production Readiness มากที่สุด? (ข้อ 6)",
+        "choices": [
+          "requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "planning ในบริบทของ Week 13 Final: Production Readiness",
+          "code review ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "planning เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "หากกำลังทบทวน Week 13 Final: Production Readiness แนวคิดใดควรนำมาใช้ในสถานการณ์นี้? (ข้อ 7)",
+        "choices": [
+          "planning ที่ไม่เกี่ยวกับโจทย์นี้",
+          "code review ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requirements ในบริบทของ Week 13 Final: Production Readiness",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 2,
+        "explanation": "requirements เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ทีมต้องการประยุกต์ Week 13 Final: Production Readiness อย่างถูกต้อง ควรให้ความสำคัญกับข้อใด? (ข้อ 8)",
+        "choices": [
+          "planning ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้",
+          "code review ในบริบทของ Week 13 Final: Production Readiness"
+        ],
+        "correctIndex": 3,
+        "explanation": "code review เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "ข้อใดเป็น learning objective ที่อยู่ในบท Week 13 Final: Production Readiness? (ข้อ 9)",
+        "choices": [
+          "testing ในบริบทของ Week 13 Final: Production Readiness",
+          "planning ที่ไม่เกี่ยวกับโจทย์นี้",
+          "requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 0,
+        "explanation": "testing เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      },
+      {
+        "prompt": "แนวทางใดสัมพันธ์กับ Week 13 Final: Production Readiness และเป้าหมายเรื่อง presentation run-through? (ข้อ 10)",
+        "choices": [
+          "planning ที่ไม่เกี่ยวกับโจทย์นี้",
+          "presentation run-through ในบริบทของ Week 13 Final: Production Readiness",
+          "requirements ที่ไม่เกี่ยวกับโจทย์นี้",
+          "การเลือกสีโลโก้โดยไม่ดูความต้องการผู้ใช้"
+        ],
+        "correctIndex": 1,
+        "explanation": "presentation run-through เป็นหนึ่งในหัวข้อที่กำหนดไว้สำหรับ Week 13 Final: Production Readiness",
+        "points": 30
+      }
+    ]
+  }
+}

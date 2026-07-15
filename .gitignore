@@ -1,0 +1,7 @@
+node_modules/
+.env
+data/trivia.sqlite
+data/trivia.sqlite-shm
+data/trivia.sqlite-wal
+npm-debug.log*
+data/backups/

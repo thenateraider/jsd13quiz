@@ -1,0 +1,947 @@
+{
+  "programme": "Junior Software Developer Programme Cohort 13",
+  "timezone": "Asia/Bangkok",
+  "publish_time": "17:00",
+  "active_days": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ],
+  "first_quiz_date": "2026-07-15",
+  "last_quiz_date": "2026-09-25",
+  "normal_close_rule": "Next calendar day at 16:59:59 Asia/Bangkok",
+  "friday_close_rule": "Following Monday at 16:59:59 Asia/Bangkok",
+  "speed_bonus": [
+    {
+      "max_elapsed_seconds": 60,
+      "bonus_percent": 100
+    },
+    {
+      "max_elapsed_seconds": 300,
+      "bonus_percent": 75
+    },
+    {
+      "max_elapsed_seconds": 900,
+      "bonus_percent": 50
+    },
+    {
+      "max_elapsed_seconds": 1800,
+      "bonus_percent": 35
+    },
+    {
+      "max_elapsed_seconds": 3600,
+      "bonus_percent": 25
+    },
+    {
+      "max_elapsed_seconds": 10800,
+      "bonus_percent": 15
+    },
+    {
+      "max_elapsed_seconds": 21600,
+      "bonus_percent": 10
+    },
+    {
+      "max_elapsed_seconds": 43200,
+      "bonus_percent": 5
+    },
+    {
+      "max_elapsed_seconds": null,
+      "bonus_percent": 0
+    }
+  ],
+  "combo_bonus": [
+    {
+      "minimum_days": 2,
+      "bonus_percent": 5
+    },
+    {
+      "minimum_days": 3,
+      "bonus_percent": 10
+    },
+    {
+      "minimum_days": 5,
+      "bonus_percent": 15
+    },
+    {
+      "minimum_days": 10,
+      "bonus_percent": 20
+    },
+    {
+      "minimum_days": 20,
+      "bonus_percent": 25
+    },
+    {
+      "minimum_days": 30,
+      "bonus_percent": 30
+    }
+  ],
+  "pass_threshold_percent": 60,
+  "holidays_pause_combo": true,
+  "weekends_pause_combo": true,
+  "extra_bonuses": {
+    "perfect_quiz_percent": 20,
+    "first_full_score_xp": 30,
+    "friday_survivor_xp": 50,
+    "weekly_perfect_xp": 100,
+    "comeback_xp": 20,
+    "fast_and_accurate_xp": 40
+  },
+  "schedule": [
+    {
+      "date": "2026-07-15",
+      "week": 3,
+      "day": "Wednesday",
+      "topic": "HTML Fundamentals",
+      "focus": [
+        "HTML document structure",
+        "semantic elements",
+        "links and forms"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-07-16",
+      "week": 3,
+      "day": "Thursday",
+      "topic": "JavaScript Objects, Arrays & Functions",
+      "focus": [
+        "object properties",
+        "array access and methods",
+        "function declaration and return"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-07-17",
+      "week": 3,
+      "day": "Friday",
+      "topic": "Week 3 Catch-up Final",
+      "focus": [
+        "HTML",
+        "objects and arrays",
+        "functions",
+        "PostgreSQL vs MongoDB",
+        "Agentic Engineering basics"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-07-20",
+      "week": 4,
+      "day": "Monday",
+      "topic": "CSS Fundamentals",
+      "focus": [
+        "selectors",
+        "properties",
+        "cascade",
+        "specificity"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-07-21",
+      "week": 4,
+      "day": "Tuesday",
+      "topic": "CSS Box Model & Layout",
+      "focus": [
+        "margin",
+        "border",
+        "padding",
+        "display",
+        "Flexbox"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-07-22",
+      "week": 4,
+      "day": "Wednesday",
+      "topic": "Responsive Web Design",
+      "focus": [
+        "media queries",
+        "relative units",
+        "mobile-first design"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-07-23",
+      "week": 4,
+      "day": "Thursday",
+      "topic": "UX/UI, Design Thinking & Problem Solving",
+      "focus": [
+        "user needs",
+        "prototype",
+        "usability",
+        "problem decomposition"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-07-24",
+      "week": 4,
+      "day": "Friday",
+      "topic": "Week 4 Final: HTML/CSS Responsive Web",
+      "focus": [
+        "HTML",
+        "CSS",
+        "responsive design",
+        "UX/UI",
+        "orientation to detail"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-07-27",
+      "week": 5,
+      "day": "Monday",
+      "topic": "Developer Role & Staying Up to Date",
+      "focus": [
+        "JSD responsibilities",
+        "documentation",
+        "learning sources",
+        "technology evaluation"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-07-28",
+      "week": 5,
+      "day": "Tuesday",
+      "topic": "HOLIDAY",
+      "focus": [],
+      "difficulty": "none",
+      "questions": 0,
+      "base_score": 0,
+      "weekly_final": false,
+      "skip": true,
+      "combo_paused": true
+    },
+    {
+      "date": "2026-07-29",
+      "week": 5,
+      "day": "Wednesday",
+      "topic": "HOLIDAY",
+      "focus": [],
+      "difficulty": "none",
+      "questions": 0,
+      "base_score": 0,
+      "weekly_final": false,
+      "skip": true,
+      "combo_paused": true
+    },
+    {
+      "date": "2026-07-30",
+      "week": 5,
+      "day": "Thursday",
+      "topic": "Git & GitHub Team Workflow",
+      "focus": [
+        "branching",
+        "pull requests",
+        "merge conflicts",
+        "team conventions"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-07-31",
+      "week": 5,
+      "day": "Friday",
+      "topic": "Week 5 Final: Git Teamwork + Conditionals & Loops",
+      "focus": [
+        "developer role",
+        "Git team workflow",
+        "if/else",
+        "loops",
+        "group project practices"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-08-03",
+      "week": 6,
+      "day": "Monday",
+      "topic": "Objects & Arrays 2",
+      "focus": [
+        "nested data",
+        "array transformations",
+        "immutability basics"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-04",
+      "week": 6,
+      "day": "Tuesday",
+      "topic": "Higher-Order Functions & Iterables",
+      "focus": [
+        "map",
+        "filter",
+        "reduce",
+        "callbacks",
+        "iteration protocols"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-05",
+      "week": 6,
+      "day": "Wednesday",
+      "topic": "Asynchronous JavaScript",
+      "focus": [
+        "event loop",
+        "promises",
+        "async/await",
+        "error handling"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-06",
+      "week": 6,
+      "day": "Thursday",
+      "topic": "Mutation, Prototype & OOP",
+      "focus": [
+        "mutation",
+        "prototype chain",
+        "classes",
+        "encapsulation"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-07",
+      "week": 6,
+      "day": "Friday",
+      "topic": "Week 6 Final: Advanced JavaScript",
+      "focus": [
+        "arrays",
+        "higher-order functions",
+        "async JavaScript",
+        "OOP",
+        "project teamwork"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-08-10",
+      "week": 7,
+      "day": "Monday",
+      "topic": "OOP Recap & Code Reading",
+      "focus": [
+        "classes",
+        "inheritance",
+        "prototype",
+        "debugging object-oriented code"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-11",
+      "week": 7,
+      "day": "Tuesday",
+      "topic": "DOM Fundamentals",
+      "focus": [
+        "DOM tree",
+        "selectors",
+        "events",
+        "element manipulation"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-12",
+      "week": 7,
+      "day": "Wednesday",
+      "topic": "HOLIDAY",
+      "focus": [],
+      "difficulty": "none",
+      "questions": 0,
+      "base_score": 0,
+      "weekly_final": false,
+      "skip": true,
+      "combo_paused": true
+    },
+    {
+      "date": "2026-08-13",
+      "week": 7,
+      "day": "Thursday",
+      "topic": "React JSX & Components",
+      "focus": [
+        "JSX",
+        "components",
+        "props",
+        "component composition"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-14",
+      "week": 7,
+      "day": "Friday",
+      "topic": "Week 7 Final: DOM + React useState",
+      "focus": [
+        "OOP",
+        "DOM",
+        "JSX",
+        "components",
+        "props",
+        "useState"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-08-17",
+      "week": 8,
+      "day": "Monday",
+      "topic": "React useEffect",
+      "focus": [
+        "effects",
+        "dependency arrays",
+        "cleanup",
+        "data fetching"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-18",
+      "week": 8,
+      "day": "Tuesday",
+      "topic": "React Router",
+      "focus": [
+        "routes",
+        "links",
+        "parameters",
+        "nested routing"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-19",
+      "week": 8,
+      "day": "Wednesday",
+      "topic": "React Context API",
+      "focus": [
+        "providers",
+        "consumers",
+        "shared state",
+        "context trade-offs"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-20",
+      "week": 8,
+      "day": "Thursday",
+      "topic": "Axios & Web Integration",
+      "focus": [
+        "HTTP methods",
+        "requests",
+        "responses",
+        "errors",
+        "API integration"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-21",
+      "week": 8,
+      "day": "Friday",
+      "topic": "Week 8 JavaScript & React Assessment",
+      "focus": [
+        "useEffect",
+        "React Router",
+        "Context API",
+        "Axios",
+        "communication practicum"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-08-24",
+      "week": 9,
+      "day": "Monday",
+      "topic": "React Optimization",
+      "focus": [
+        "memoization",
+        "rendering",
+        "React.memo",
+        "useMemo",
+        "useCallback"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-25",
+      "week": 9,
+      "day": "Tuesday",
+      "topic": "React Recap & Debugging",
+      "focus": [
+        "state",
+        "effects",
+        "routing",
+        "debugging patterns"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-26",
+      "week": 9,
+      "day": "Wednesday",
+      "topic": "Sprint 2 Project Practices",
+      "focus": [
+        "user stories",
+        "task breakdown",
+        "definition of done",
+        "Git collaboration"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-27",
+      "week": 9,
+      "day": "Thursday",
+      "topic": "Async Integration in React",
+      "focus": [
+        "loading state",
+        "error state",
+        "race conditions",
+        "API flows"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-08-28",
+      "week": 9,
+      "day": "Friday",
+      "topic": "Week 9 Final: React Project Readiness",
+      "focus": [
+        "optimization",
+        "debugging",
+        "project workflow",
+        "async integration",
+        "BSM challenge"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-08-31",
+      "week": 10,
+      "day": "Monday",
+      "topic": "Backend Systems & API Design",
+      "focus": [
+        "client-server",
+        "REST",
+        "resources",
+        "status codes"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-01",
+      "week": 10,
+      "day": "Tuesday",
+      "topic": "Node.js Fundamentals",
+      "focus": [
+        "runtime",
+        "modules",
+        "npm",
+        "environment variables"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-02",
+      "week": 10,
+      "day": "Wednesday",
+      "topic": "Express.js Fundamentals",
+      "focus": [
+        "routes",
+        "request",
+        "response",
+        "route parameters"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-03",
+      "week": 10,
+      "day": "Thursday",
+      "topic": "Middleware & Error Handling",
+      "focus": [
+        "middleware chain",
+        "next",
+        "validation",
+        "error middleware"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-04",
+      "week": 10,
+      "day": "Friday",
+      "topic": "Week 10 Final: Backend Introduction",
+      "focus": [
+        "API design",
+        "Node.js",
+        "Express",
+        "middleware",
+        "error handling"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-09-07",
+      "week": 11,
+      "day": "Monday",
+      "topic": "Backend Error Handling",
+      "focus": [
+        "operational errors",
+        "HTTP errors",
+        "central handlers",
+        "logging"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-08",
+      "week": 11,
+      "day": "Tuesday",
+      "topic": "MongoDB & Mongoose",
+      "focus": [
+        "documents",
+        "schemas",
+        "models",
+        "queries",
+        "validation"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-09",
+      "week": 11,
+      "day": "Wednesday",
+      "topic": "PostgreSQL Integration",
+      "focus": [
+        "SQL queries",
+        "relationships",
+        "parameters",
+        "database integration"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-10",
+      "week": 11,
+      "day": "Thursday",
+      "topic": "Docker & Deployment",
+      "focus": [
+        "images",
+        "containers",
+        "Dockerfile",
+        "ports",
+        "environment configuration"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-11",
+      "week": 11,
+      "day": "Friday",
+      "topic": "Week 11 Final: Data, Docker & Authentication",
+      "focus": [
+        "error handling",
+        "MongoDB",
+        "PostgreSQL",
+        "Docker",
+        "authentication and authorization"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-09-14",
+      "week": 12,
+      "day": "Monday",
+      "topic": "Authentication & Authorization",
+      "focus": [
+        "identity",
+        "permissions",
+        "sessions",
+        "tokens",
+        "role-based access"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-15",
+      "week": 12,
+      "day": "Tuesday",
+      "topic": "Testing Fundamentals",
+      "focus": [
+        "unit tests",
+        "integration tests",
+        "assertions",
+        "test cases"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-16",
+      "week": 12,
+      "day": "Wednesday",
+      "topic": "API Testing",
+      "focus": [
+        "request testing",
+        "status assertions",
+        "mocking",
+        "test database"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-17",
+      "week": 12,
+      "day": "Thursday",
+      "topic": "Sprint 3 Quality & Delivery",
+      "focus": [
+        "acceptance criteria",
+        "regression testing",
+        "code review",
+        "release readiness"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-18",
+      "week": 12,
+      "day": "Friday",
+      "topic": "Week 12 Final: Secure & Tested Backend",
+      "focus": [
+        "authentication",
+        "authorization",
+        "testing",
+        "API testing",
+        "project quality"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-09-21",
+      "week": 13,
+      "day": "Monday",
+      "topic": "Final Sprint Planning",
+      "focus": [
+        "scope",
+        "priorities",
+        "risk",
+        "task ownership"
+      ],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-22",
+      "week": 13,
+      "day": "Tuesday",
+      "topic": "Requirements & Acceptance Criteria",
+      "focus": [
+        "functional requirements",
+        "non-functional requirements",
+        "user stories",
+        "acceptance tests"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-23",
+      "week": 13,
+      "day": "Wednesday",
+      "topic": "Code Review & Git Release Workflow",
+      "focus": [
+        "review comments",
+        "branch protection",
+        "merge strategy",
+        "release preparation"
+      ],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-24",
+      "week": 13,
+      "day": "Thursday",
+      "topic": "Technical Presentation & Demo Readiness",
+      "focus": [
+        "architecture explanation",
+        "demo flow",
+        "handling questions",
+        "fallback planning"
+      ],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-25",
+      "week": 13,
+      "day": "Friday",
+      "topic": "Week 13 Final: Production Readiness",
+      "focus": [
+        "planning",
+        "requirements",
+        "code review",
+        "testing",
+        "presentation run-through"
+      ],
+      "difficulty": "hard",
+      "questions": 10,
+      "base_score": 300,
+      "weekly_final": true
+    }
+  ]
+}
