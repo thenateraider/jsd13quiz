@@ -29,7 +29,7 @@ function buildLeaderboardEmbed(rows) {
     const accuracy = row.total_answered
       ? Math.round(row.total_correct / row.total_answered * 100)
       : 0;
-    return `${rankIcon(row.rank)}**#${row.rank}** <@${row.user_id}>\n> ⭐ **${row.total_xp} XP**  •  🎯 **${accuracy}%**  •  🔥 Combo **${row.current_combo} วัน** (**+${comboPercent}% XP**)`;
+    return `${rankIcon(row.rank)}**#${row.rank}** <@${row.user_id}>\n> ⭐ **${row.total_xp} XP**  •  🎯 **${accuracy}%**  •  🔥**${row.current_combo} วัน** (**+${comboPercent}% XP**)`;
   });
 
   return new EmbedBuilder()
