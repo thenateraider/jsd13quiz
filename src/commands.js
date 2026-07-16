@@ -10,6 +10,18 @@ export const commands = [
     .setDescription('ดูอันดับคะแนนสูงสุด'),
 
   new SlashCommandBuilder()
+    .setName('help')
+    .setDescription('ดูวิธีเล่นและคำสั่งทั้งหมด'),
+
+  new SlashCommandBuilder()
+    .setName('quiz-status')
+    .setDescription('ตรวจสอบสถานะ Quiz วันนี้และสถานะของคุณ'),
+
+  new SlashCommandBuilder()
+    .setName('rules')
+    .setDescription('ดูกติกา ระบบคะแนน Bonus และ Combo'),
+
+  new SlashCommandBuilder()
     .setName('quiz-today')
     .setDescription('เปิด Quiz ของวันนี้'),
 

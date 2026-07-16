@@ -7,6 +7,7 @@ import {
   getOrCreateSession,
   getProfile,
   getQuizPost,
+  getSession,
   getUserRank,
   recordAnswer,
 } from './database.js';
@@ -16,36 +17,11 @@ import { elapsedSeconds, getDateKey } from './time.js';
 import { getQuizCloseAt, getSpeedBonusPercent, isQuizOpen } from './rules.js';
 import { validateData } from './validate-data.js';
 
-function escapeMarkdown(text) {
-  return text.replace(/([\\`*_{}[\]()#+\-.!|>~])/g, '\\$1');
-}
-
-async function getLeaderboardName(interaction, userId) {
-  try {
-    const member = await interaction.guild?.members.fetch(userId);
-    if (member) return escapeMarkdown(member.displayName);
-  } catch {
-    // The player may no longer be in this server. Try their global Discord name.
-  }
-
-  try {
-    const user = await interaction.client.users.fetch(userId);
-    return escapeMarkdown(user.globalName ?? user.username);
-  } catch {
-    return `ผู้เล่น •••${userId.slice(-4)}`;
-  }
-}
-
-function truncate(text, length) {
-  return text.length > length ? `${text.slice(0, length - 1)}…` : text;
-}
-
-function buildLeaderboardEmbed(rows, names) {
+function buildLeaderboardEmbed(rows) {
   const rankIcon = (rank) => ['🥇', '🥈', '🥉'][rank - 1] ?? '🏅';
-  const lines = rows.map((row) => {
-    const name = truncate(names.get(row.user_id), 18).padEnd(18);
-    return `${rankIcon(row.rank)} ${String(row.rank).padStart(2)}  ${name}  ⭐ ${String(row.total_xp).padStart(4)}  🔥 ${row.current_combo}`;
-  });
+  const lines = rows.map((row) =>
+    `${rankIcon(row.rank)} **#${row.rank}** <@${row.user_id}>\n> ⭐ **${row.total_xp} XP**  •  🔥 **${row.current_combo} Combo**`
+  );
 
   return new EmbedBuilder()
     .setColor(0xF1C40F)
@@ -53,12 +29,11 @@ function buildLeaderboardEmbed(rows, names) {
     .setDescription([
       'อันดับผู้เล่นจากคะแนนสะสมทั้งหมด',
       '',
-      '`    #  PLAYER               XP      COMBO`',
-      ...lines.map((line) => `\`${line}\``),
+      ...lines,
       '',
       '🥇🥈🥉 Top 3  •  ⭐ XP สะสม  •  🔥 Combo ปัจจุบัน',
     ].join('\n'))
-    .setFooter({ text: `ผู้เล่นทั้งหมด ${names.size} คน` });
+    .setFooter({ text: `ผู้เล่นทั้งหมด ${rows.length} คน` });
 }
 
 function accuracyBar(accuracy) {
@@ -102,6 +77,148 @@ function buildProfileEmbed(interaction, stats, rank, accuracy) {
     .setFooter({ text: 'JSD13 Daily Trivia • เล่นทุกวันเพื่อรักษา Combo!' });
 }
 
+function buildHelpEmbed() {
+  return new EmbedBuilder()
+    .setColor(0x5865F2)
+    .setTitle('🤖 JSD13 Trivia — วิธีใช้งาน')
+    .setDescription('ตอบ Quiz ประจำวัน เก็บ XP ทำ Combo และแข่งขันกับเพื่อนใน Leaderboard!')
+    .addFields(
+      {
+        name: '🎮 เริ่มเล่น',
+        value: [
+          '`/quiz-today` เปิดโพสต์ Quiz ของวันนี้',
+          '`/quiz-status` เช็กเวลาและสถานะการเล่นของคุณ',
+          'กดปุ่ม **เริ่มทำ Quiz** ใต้โพสต์ แล้วเลือกคำตอบ A–D',
+        ].join('\n'),
+      },
+      {
+        name: '📊 คะแนนและอันดับ',
+        value: [
+          '`/profile` ดู XP, อันดับ, Combo และ Accuracy',
+          '`/leaderboard` ดูอันดับผู้เล่นทั้งหมด',
+          '`/rules` ดูกติกาและ Bonus ที่ได้รับ',
+        ].join('\n'),
+      },
+      {
+        name: '💡 เคล็ดลับ',
+        value: 'ตอบเร็วเพื่อรับ Speed Bonus และเล่นผ่านต่อเนื่องเพื่อเพิ่ม Combo Bonus 🔥',
+      },
+    )
+    .setFooter({ text: 'คำตอบและผลลัพธ์ของ Quiz จะแสดงแบบส่วนตัว' });
+}
+
+function formatDuration(seconds) {
+  if (seconds === null) return 'หลังจาก 12 ชั่วโมง';
+  if (seconds < 60) return `ภายใน ${seconds} วินาที`;
+  if (seconds < 3600) return `ภายใน ${seconds / 60} นาที`;
+  return `ภายใน ${seconds / 3600} ชั่วโมง`;
+}
+
+function buildRulesEmbed() {
+  const speedTiers = calendar.speed_bonus
+    .map((tier) => `⚡ ${formatDuration(tier.max_elapsed_seconds)} — **+${tier.bonus_percent}%**`)
+    .join('\n');
+  const comboTiers = calendar.combo_bonus
+    .map((tier) => `🔥 ${tier.minimum_days} วัน — **+${tier.bonus_percent}%**`)
+    .join('\n');
+  const extras = calendar.extra_bonuses;
+
+  return new EmbedBuilder()
+    .setColor(0xF39C12)
+    .setTitle('📜 กติกาและระบบคะแนน')
+    .setDescription(`ต้องตอบถูกอย่างน้อย **${calendar.pass_threshold_percent}%** จึงจะผ่านและรักษา Combo`)
+    .addFields(
+      {
+        name: '⭐ XP พื้นฐาน',
+        value: 'ตอบถูกจะได้รับ XP ตามคะแนนของแต่ละข้อ ตอบผิดไม่ได้ XP ของข้อนั้น',
+      },
+      {
+        name: '⚡ Speed Bonus',
+        value: speedTiers,
+        inline: true,
+      },
+      {
+        name: '🔥 Combo Bonus',
+        value: comboTiers,
+        inline: true,
+      },
+      {
+        name: '🎁 Bonus พิเศษ',
+        value: [
+          `💯 ตอบถูกทุกข้อ — **+${extras.perfect_quiz_percent}%** ของ Base XP`,
+          `🥇 Full Score คนแรก — **+${extras.first_full_score_xp} XP**`,
+          `🛡️ ผ่านครบสัปดาห์ — **+${extras.friday_survivor_xp} XP**`,
+          `✨ Perfect ครบสัปดาห์ — **+${extras.weekly_perfect_xp} XP**`,
+          `🔄 กลับมาผ่านหลังไม่ผ่าน — **+${extras.comeback_xp} XP**`,
+          `🚀 ถูกอย่างน้อย 80% ภายใน 5 นาที — **+${extras.fast_and_accurate_xp} XP**`,
+        ].join('\n'),
+      },
+      {
+        name: '🗓️ การรักษา Combo',
+        value: 'วันเสาร์–อาทิตย์และวันหยุดที่กำหนดไว้จะไม่ทำให้ Combo ขาด',
+      },
+    )
+    .setFooter({ text: 'XP รวม = Base + Speed + Combo + Perfect + Bonus พิเศษ' });
+}
+
+function buildQuizStatusEmbed(dateKey, entry, quiz, post, session) {
+  const closeAt = entry ? getQuizCloseAt(entry, config.timezone) : null;
+  const open = entry && !entry.skip && quiz?.questions?.length && isQuizOpen(entry, config.timezone);
+  let status = '⚪ วันนี้ไม่มี Quiz';
+  let color = 0x95A5A6;
+
+  if (entry && !entry.skip && !post) {
+    status = '🟡 Quiz วันนี้ยังไม่ถูกโพสต์';
+    color = 0xF1C40F;
+  } else if (open && post) {
+    status = '🟢 Quiz กำลังเปิด';
+    color = 0x2ECC71;
+  } else if (entry && !entry.skip && post) {
+    status = '🔴 Quiz ปิดรับคำตอบแล้ว';
+    color = 0xE74C3C;
+  }
+
+  let playerStatus = '⚪ ยังไม่ได้เริ่ม';
+  if (session?.finished_at) {
+    playerStatus = `${session.passed ? '✅ ผ่านแล้ว' : '❌ ยังไม่ผ่าน'}\n⭐ ได้รับ **${session.total_xp ?? 0} XP** • ตอบถูก **${session.correct_count}/${session.total_questions}**`;
+  } else if (session) {
+    playerStatus = `🟡 กำลังทำอยู่ • ข้อ **${session.current_index + 1}/${quiz.questions.length}**`;
+  }
+
+  const embed = new EmbedBuilder()
+    .setColor(color)
+    .setTitle(`📅 Quiz Status — ${dateKey}`)
+    .setDescription(`## ${status}`)
+    .addFields(
+      {
+        name: '📚 หัวข้อ',
+        value: entry?.topic ?? 'ไม่มี Quiz ในวันนี้',
+        inline: true,
+      },
+      {
+        name: '👤 สถานะของคุณ',
+        value: playerStatus,
+        inline: true,
+      },
+    );
+
+  if (entry && !entry.skip && closeAt) {
+    const unix = Math.floor(closeAt.getTime() / 1000);
+    embed.addFields({
+      name: '⏰ ปิดรับคำตอบ',
+      value: `<t:${unix}:F>\n<t:${unix}:R>`,
+    });
+  }
+  if (post) {
+    embed.addFields({
+      name: '🔗 ไปยัง Quiz',
+      value: `[เปิด Quiz วันนี้](https://discord.com/channels/${config.guildId}/${post.channel_id}/${post.message_id})`,
+    });
+  }
+
+  return embed;
+}
+
 function resultEmbed(result) {
   return new EmbedBuilder()
     .setTitle(result.passed ? '✅ ผ่าน Daily Quiz!' : '❌ ยังไม่ผ่าน')
@@ -120,6 +237,26 @@ function resultEmbed(result) {
 
 export async function handleInteraction(interaction) {
   if (interaction.isChatInputCommand()) {
+    if (interaction.commandName === 'help') {
+      return interaction.reply({ embeds: [buildHelpEmbed()], ephemeral: true });
+    }
+
+    if (interaction.commandName === 'rules') {
+      return interaction.reply({ embeds: [buildRulesEmbed()], ephemeral: true });
+    }
+
+    if (interaction.commandName === 'quiz-status') {
+      const dateKey = getDateKey(config.timezone);
+      const entry = getCalendarEntry(dateKey);
+      const quiz = getQuiz(dateKey);
+      const post = getQuizPost(dateKey);
+      const session = getSession(dateKey, interaction.user.id);
+      return interaction.reply({
+        embeds: [buildQuizStatusEmbed(dateKey, entry, quiz, post, session)],
+        ephemeral: true,
+      });
+    }
+
     if (interaction.commandName === 'profile') {
       const stats = getProfile(interaction.user.id);
       const rank = getUserRank(interaction.user.id);
@@ -141,14 +278,8 @@ export async function handleInteraction(interaction) {
         });
       }
 
-      await interaction.deferReply();
-      const resolvedNames = await Promise.all(
-        rows.map(async (row) => [row.user_id, await getLeaderboardName(interaction, row.user_id)]),
-      );
-      const names = new Map(resolvedNames);
-
-      await interaction.editReply({
-        embeds: [buildLeaderboardEmbed(rows, names)],
+      await interaction.reply({
+        embeds: [buildLeaderboardEmbed(rows)],
       });
       return;
     }

@@ -93,6 +93,12 @@ export function getOrCreateSession(dateKey, userId) {
   `).get(dateKey, userId);
 }
 
+export function getSession(dateKey, userId) {
+  return db.prepare(`
+    SELECT * FROM quiz_sessions WHERE date_key = ? AND user_id = ?
+  `).get(dateKey, userId) ?? null;
+}
+
 export function recordAnswer({ dateKey, userId, questionIndex, selectedIndex, isCorrect, basePoints }) {
   const transaction = db.transaction(() => {
     db.prepare(`
