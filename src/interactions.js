@@ -61,6 +61,47 @@ function buildLeaderboardEmbed(rows, names) {
     .setFooter({ text: `ผู้เล่นทั้งหมด ${names.size} คน` });
 }
 
+function accuracyBar(accuracy) {
+  const filled = Math.round(accuracy / 10);
+  return `${'🟩'.repeat(filled)}${'⬛'.repeat(10 - filled)}`;
+}
+
+function buildProfileEmbed(interaction, stats, rank, accuracy) {
+  const rankText = rank ? `#${rank}` : 'ยังไม่มีอันดับ';
+
+  return new EmbedBuilder()
+    .setColor(0x5865F2)
+    .setAuthor({
+      name: interaction.user.displayName,
+      iconURL: interaction.user.displayAvatarURL(),
+    })
+    .setTitle('📊 PLAYER PROFILE')
+    .setThumbnail(interaction.user.displayAvatarURL({ size: 256 }))
+    .setDescription(`🏆 **อันดับปัจจุบัน ${rankText}**`)
+    .addFields(
+      {
+        name: '⭐ XP สะสม',
+        value: `## ${stats.total_xp}`,
+        inline: true,
+      },
+      {
+        name: '🔥 Combo ปัจจุบัน',
+        value: `## ${stats.current_combo}`,
+        inline: true,
+      },
+      {
+        name: '🏅 Combo สูงสุด',
+        value: `## ${stats.longest_combo}`,
+        inline: true,
+      },
+      {
+        name: `🎯 Accuracy — ${accuracy}%`,
+        value: `${accuracyBar(accuracy)}\nตอบถูก **${stats.total_correct}** จาก **${stats.total_answered}** ข้อ`,
+      },
+    )
+    .setFooter({ text: 'JSD13 Daily Trivia • เล่นทุกวันเพื่อรักษา Combo!' });
+}
+
 function resultEmbed(result) {
   return new EmbedBuilder()
     .setTitle(result.passed ? '✅ ผ่าน Daily Quiz!' : '❌ ยังไม่ผ่าน')
@@ -87,17 +128,7 @@ export async function handleInteraction(interaction) {
         : 0;
 
       return interaction.reply({
-        embeds: [
-          new EmbedBuilder()
-            .setTitle(`📊 Profile — ${interaction.user.displayName}`)
-            .setDescription([
-              `XP: **${stats.total_xp}**`,
-              `🔥 Current Combo: **${stats.current_combo}**`,
-              `🏅 Longest Combo: **${stats.longest_combo}**`,
-              `🎯 Accuracy: **${accuracy}%**`,
-              `🏅 อันดับปัจจุบัน: **${rank ? `#${rank}` : 'ยังไม่มีอันดับ'}**`,
-            ].join('\n')),
-        ],
+        embeds: [buildProfileEmbed(interaction, stats, rank, accuracy)],
         ephemeral: true,
       });
     }
