@@ -26,7 +26,10 @@ function buildLeaderboardEmbed(rows) {
   const rankIcon = (rank) => ['🥇 ', '🥈 ', '🥉 '][rank - 1] ?? '';
   const lines = rows.map((row) => {
     const comboPercent = getComboPercent(row.current_combo, calendar.combo_bonus);
-    return `${rankIcon(row.rank)}**#${row.rank}** <@${row.user_id}>\n> ⭐ **${row.total_xp} XP**  •  🔥 Combo **${row.current_combo} วัน** (**+${comboPercent}% XP**)`;
+    const accuracy = row.total_answered
+      ? Math.round(row.total_correct / row.total_answered * 100)
+      : 0;
+    return `${rankIcon(row.rank)}**#${row.rank}** <@${row.user_id}>\n> ⭐ **${row.total_xp} XP**  •  🎯 **${accuracy}%**  •  🔥 Combo **${row.current_combo} วัน** (**+${comboPercent}% XP**)`;
   });
 
   return new EmbedBuilder()
@@ -35,6 +38,7 @@ function buildLeaderboardEmbed(rows) {
     .setDescription([
       '### 📖 วิธีอ่าน Leaderboard',
       '🥇🥈🥉 **Top 3**  •  ⭐ **XP สะสม**',
+      '🎯 **Accuracy** = เปอร์เซ็นต์คำตอบที่ตอบถูกทั้งหมด',
       '🔥 **Combo** = จำนวนวันที่ผ่าน Quiz ต่อเนื่อง',
       '➕ **เปอร์เซ็นต์** = Bonus XP ที่ได้รับจาก Combo',
       '',
