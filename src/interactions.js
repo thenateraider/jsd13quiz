@@ -14,24 +14,32 @@ import {
 import { publishQuiz } from './publisher.js';
 import { buildQuestion } from './quiz-ui.js';
 import { elapsedSeconds, getDateKey } from './time.js';
-import { getQuizCloseAt, getSpeedBonusPercent, isQuizOpen } from './rules.js';
+import {
+  getComboPercent,
+  getQuizCloseAt,
+  getSpeedBonusPercent,
+  isQuizOpen,
+} from './rules.js';
 import { validateData } from './validate-data.js';
 
 function buildLeaderboardEmbed(rows) {
-  const rankIcon = (rank) => ['🥇', '🥈', '🥉'][rank - 1] ?? '🏅';
-  const lines = rows.map((row) =>
-    `${rankIcon(row.rank)} **#${row.rank}** <@${row.user_id}>\n> ⭐ **${row.total_xp} XP**  •  🔥 **${row.current_combo} Combo**`
-  );
+  const rankIcon = (rank) => ['🥇 ', '🥈 ', '🥉 '][rank - 1] ?? '';
+  const lines = rows.map((row) => {
+    const comboPercent = getComboPercent(row.current_combo, calendar.combo_bonus);
+    return `${rankIcon(row.rank)}**#${row.rank}** <@${row.user_id}>\n> ⭐ **${row.total_xp} XP**  •  🔥 Combo **${row.current_combo} วัน** (**+${comboPercent}% XP**)`;
+  });
 
   return new EmbedBuilder()
     .setColor(0xF1C40F)
-    .setTitle('🏆 JSD13 Leaderboard')
+    .setTitle('🏆 JSD#13 Leaderboard')
     .setDescription([
-      'อันดับผู้เล่นจากคะแนนสะสมทั้งหมด',
+      '### 📖 วิธีอ่าน Leaderboard',
+      '🥇🥈🥉 **Top 3**  •  ⭐ **XP สะสม**',
+      '🔥 **Combo** = จำนวนวันที่ผ่าน Quiz ต่อเนื่อง',
+      '➕ **เปอร์เซ็นต์** = Bonus XP ที่ได้รับจาก Combo',
       '',
+      '### 📊 อันดับผู้เล่น',
       ...lines,
-      '',
-      '🥇🥈🥉 Top 3  •  ⭐ XP สะสม  •  🔥 Combo ปัจจุบัน',
     ].join('\n'))
     .setFooter({ text: `ผู้เล่นทั้งหมด ${rows.length} คน` });
 }
@@ -43,6 +51,8 @@ function accuracyBar(accuracy) {
 
 function buildProfileEmbed(interaction, stats, rank, accuracy) {
   const rankText = rank ? `#${rank}` : 'ยังไม่มีอันดับ';
+  const comboPercent = getComboPercent(stats.current_combo, calendar.combo_bonus);
+  const longestComboPercent = getComboPercent(stats.longest_combo, calendar.combo_bonus);
 
   return new EmbedBuilder()
     .setColor(0x5865F2)
@@ -61,12 +71,12 @@ function buildProfileEmbed(interaction, stats, rank, accuracy) {
       },
       {
         name: '🔥 Combo ปัจจุบัน',
-        value: `## ${stats.current_combo}`,
+        value: `## ${stats.current_combo} วัน\n**+${comboPercent}% XP**`,
         inline: true,
       },
       {
         name: '🏅 Combo สูงสุด',
-        value: `## ${stats.longest_combo}`,
+        value: `## ${stats.longest_combo} วัน\nสูงสุด **+${longestComboPercent}% XP**`,
         inline: true,
       },
       {
@@ -74,7 +84,7 @@ function buildProfileEmbed(interaction, stats, rank, accuracy) {
         value: `${accuracyBar(accuracy)}\nตอบถูก **${stats.total_correct}** จาก **${stats.total_answered}** ข้อ`,
       },
     )
-    .setFooter({ text: 'JSD13 Daily Trivia • เล่นทุกวันเพื่อรักษา Combo!' });
+    .setFooter({ text: 'Combo = จำนวนวันที่ผ่าน Quiz ต่อเนื่อง • วันหยุดไม่ทำให้ Combo ขาด' });
 }
 
 function buildHelpEmbed() {
