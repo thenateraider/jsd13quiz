@@ -16,6 +16,51 @@ import { elapsedSeconds, getDateKey } from './time.js';
 import { getQuizCloseAt, getSpeedBonusPercent, isQuizOpen } from './rules.js';
 import { validateData } from './validate-data.js';
 
+function escapeMarkdown(text) {
+  return text.replace(/([\\`*_{}[\]()#+\-.!|>~])/g, '\\$1');
+}
+
+async function getLeaderboardName(interaction, userId) {
+  try {
+    const member = await interaction.guild?.members.fetch(userId);
+    if (member) return escapeMarkdown(member.displayName);
+  } catch {
+    // The player may no longer be in this server. Try their global Discord name.
+  }
+
+  try {
+    const user = await interaction.client.users.fetch(userId);
+    return escapeMarkdown(user.globalName ?? user.username);
+  } catch {
+    return `ผู้เล่น •••${userId.slice(-4)}`;
+  }
+}
+
+function truncate(text, length) {
+  return text.length > length ? `${text.slice(0, length - 1)}…` : text;
+}
+
+function buildLeaderboardEmbed(rows, names) {
+  const rankIcon = (rank) => ['🥇', '🥈', '🥉'][rank - 1] ?? '🏅';
+  const lines = rows.map((row) => {
+    const name = truncate(names.get(row.user_id), 18).padEnd(18);
+    return `${rankIcon(row.rank)} ${String(row.rank).padStart(2)}  ${name}  ⭐ ${String(row.total_xp).padStart(4)}  🔥 ${row.current_combo}`;
+  });
+
+  return new EmbedBuilder()
+    .setColor(0xF1C40F)
+    .setTitle('🏆 JSD13 Leaderboard')
+    .setDescription([
+      'อันดับผู้เล่นจากคะแนนสะสมทั้งหมด',
+      '',
+      '`    #  PLAYER               XP      COMBO`',
+      ...lines.map((line) => `\`${line}\``),
+      '',
+      '🥇🥈🥉 Top 3  •  ⭐ XP สะสม  •  🔥 Combo ปัจจุบัน',
+    ].join('\n'))
+    .setFooter({ text: `ผู้เล่นทั้งหมด ${names.size} คน` });
+}
+
 function resultEmbed(result) {
   return new EmbedBuilder()
     .setTitle(result.passed ? '✅ ผ่าน Daily Quiz!' : '❌ ยังไม่ผ่าน')
@@ -59,27 +104,21 @@ export async function handleInteraction(interaction) {
 
     if (interaction.commandName === 'leaderboard') {
       const rows = getLeaderboard();
-      const lines = rows.length
-        ? rows.map((row) => `${row.rank}. <@${row.user_id}> — **${row.total_xp} XP** 🔥${row.current_combo}`)
-        : ['ยังไม่มีคะแนน'];
-      const pages = [];
-      let page = '';
-      for (const line of lines) {
-        if (page && page.length + line.length + 1 > 3800) {
-          pages.push(page);
-          page = '';
-        }
-        page += `${page ? '\n' : ''}${line}`;
-      }
-      pages.push(page);
-      await interaction.reply({
-        embeds: [new EmbedBuilder().setTitle('🏆 JSD13 Leaderboard — ทุกคน').setDescription(pages[0])],
-      });
-      for (let index = 1; index < pages.length; index += 1) {
-        await interaction.followUp({
-          embeds: [new EmbedBuilder().setTitle(`🏆 JSD13 Leaderboard (${index + 1}/${pages.length})`).setDescription(pages[index])],
+      if (!rows.length) {
+        return interaction.reply({
+          embeds: [new EmbedBuilder().setTitle('🏆 JSD13 Leaderboard').setDescription('ยังไม่มีคะแนน')],
         });
       }
+
+      await interaction.deferReply();
+      const resolvedNames = await Promise.all(
+        rows.map(async (row) => [row.user_id, await getLeaderboardName(interaction, row.user_id)]),
+      );
+      const names = new Map(resolvedNames);
+
+      await interaction.editReply({
+        embeds: [buildLeaderboardEmbed(rows, names)],
+      });
       return;
     }
 
