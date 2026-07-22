@@ -66,6 +66,49 @@ test('refreshed question prompts are unique from 22 July onward', () => {
   assert.equal(new Set(prompts).size, prompts.length);
 });
 
+test('refreshed question bank does not recycle generic answer choices', () => {
+  const choices = Object.entries(questions)
+    .filter(([date]) => date >= '2026-07-22')
+    .flatMap(([, quiz]) => quiz.questions.flatMap((question) => question.choices));
+  const banned = [
+    'เลือกวิธีที่คุ้นเคยที่สุดทันที โดยไม่อ่าน requirement',
+    'ตรวจเฉพาะ happy path แล้วถือว่างานเสร็จ',
+    'ข้ามการ review เพราะโค้ดรันบนเครื่องผู้เขียนได้',
+  ];
+  for (const choice of banned) assert.equal(choices.includes(choice), false);
+});
+
+test('every refreshed question has four distinct choices', () => {
+  for (const [date, quiz] of Object.entries(questions)) {
+    if (date < '2026-07-22') continue;
+    for (const question of quiz.questions) {
+      assert.equal(new Set(question.choices).size, 4, `${date}: duplicated choice in one question`);
+    }
+  }
+});
+
+test('refreshed questions contain no generic concept-definition fallbacks', () => {
+  const fallbackPatterns = [
+    /แนวคิด .+ ที่ต้องเชื่อมกับ requirement/,
+    /คำอธิบาย .+ ที่ชี้ส่วนประกอบ/,
+    /ข้อตกลงเรื่อง .+ ที่ระบุผู้รับผิดชอบ/,
+    /การจัดการ .+ จากหลักฐาน/,
+    /การทำ .+ แบบทำซ้ำได้/,
+    /การสื่อสารเรื่อง .+ ด้วยข้อเท็จจริง/,
+    /ข้อกำหนดที่ทำให้ทีมตกลงขอบเขตของ/,
+    /การเตรียม .+ ให้มีลำดับ/,
+  ];
+  for (const [date, quiz] of Object.entries(questions)) {
+    if (date < '2026-07-22') continue;
+    for (const question of quiz.questions) {
+      const text = [question.prompt, ...question.choices, question.explanation].join('\n');
+      for (const pattern of fallbackPatterns) {
+        assert.doesNotMatch(text, pattern, `${date}: generic fallback found`);
+      }
+    }
+  }
+});
+
 test('question UI keeps full choices in embed and uses short answer buttons', () => {
   const longHtml = '<main><section><h1>ข้อความตัวอย่างที่ยาวเกินความยาวของปุ่ม Discord</h1></section></main>';
   const payload = buildQuestion('2026-07-15', 0, {

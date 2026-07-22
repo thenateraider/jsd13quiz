@@ -255,15 +255,22 @@ function answerReviewEmbeds(quiz, answers) {
   const lines = quiz.questions.map((question, index) => {
     const answer = answerByQuestion.get(index);
     if (!answer) return `⚪ **ข้อ ${index + 1}** — ไม่มีคำตอบ`;
-    if (answer.is_correct) return `✅ **ข้อ ${index + 1}** — ตอบถูก`;
+    const correct = question.choices[question.correctIndex];
+    if (answer.is_correct) {
+      return [
+        `✅ **ข้อ ${index + 1} — ตอบถูก**`,
+        `**คำถาม:** ${question.prompt}`,
+        `**เฉลย:** ${String(correct)}`,
+      ].join('\n');
+    }
 
     const selected = question.choices[answer.selected_index] ?? 'ไม่พบตัวเลือก';
-    const correct = question.choices[question.correctIndex];
     return [
-      `❌ **ข้อ ${index + 1}** — ${question.prompt}`,
-      `คุณตอบ: **${String(selected)}**`,
-      `คำตอบที่ถูก: **${String(correct)}**`,
-      `เหตุผล: ${question.explanation}`,
+      `❌ **ข้อ ${index + 1} — ตอบผิด**`,
+      `**คำถาม:** ${question.prompt}`,
+      `**คำตอบที่ตอบ:** ${String(selected)}`,
+      `**เฉลย:** ${String(correct)}`,
+      `**คำอธิบาย:** ${question.explanation}`,
     ].join('\n');
   });
 
@@ -342,10 +349,19 @@ export async function handleInteraction(interaction) {
         return interaction.reply({ content: 'วันนี้ยังไม่มี Quiz ที่ถูกโพสต์', ephemeral: true });
       }
 
-      return interaction.reply({
-        content: `เปิด Quiz วันนี้: https://discord.com/channels/${interaction.guildId}/${post.channel_id}/${post.message_id}`,
-        ephemeral: true,
-      });
+      const quiz = getQuiz(dateKey);
+      const session = getSession(dateKey, interaction.user.id);
+      const quizUrl = `https://discord.com/channels/${interaction.guildId}/${post.channel_id}/${post.message_id}`;
+
+      if (quiz && session?.finished_at) {
+        return interaction.reply({
+          content: `คุณทำ Quiz วันนี้เสร็จแล้ว • [เปิดโพสต์ Quiz](${quizUrl})`,
+          embeds: answerReviewEmbeds(quiz, getAnswers(dateKey, interaction.user.id)),
+          ephemeral: true,
+        });
+      }
+
+      return interaction.reply({ content: `เปิด Quiz วันนี้: ${quizUrl}`, ephemeral: true });
     }
 
     if (interaction.commandName === 'quiz-post') {
