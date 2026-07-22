@@ -16,8 +16,8 @@ import { buildQuestion } from '../src/quiz-ui.js';
 
 test('question bank matches the complete calendar', () => {
   assert.deepEqual(validateData(calendar, questions), []);
-  assert.equal(Object.keys(questions).length, 50);
-  assert.equal(Object.values(questions).reduce((sum, quiz) => sum + quiz.questions.length, 0), 305);
+  assert.equal(Object.keys(questions).length, 55);
+  assert.equal(Object.values(questions).reduce((sum, quiz) => sum + quiz.questions.length, 0), 345);
 });
 
 test('normal quiz closes next day and Friday quiz closes Monday', () => {
@@ -52,10 +52,18 @@ test('validator reports malformed questions', () => {
 });
 
 test('quiz progress counts active quiz days and excludes holidays', () => {
-  assert.deepEqual(getQuizProgress('2026-07-15'), { current: 1, total: 50, remaining: 49 });
-  assert.deepEqual(getQuizProgress('2026-07-30'), { current: 10, total: 50, remaining: 40 });
+  assert.deepEqual(getQuizProgress('2026-07-15'), { current: 1, total: 55, remaining: 54 });
+  assert.deepEqual(getQuizProgress('2026-07-30'), { current: 10, total: 55, remaining: 45 });
   assert.equal(getQuizProgress('2026-07-28'), null);
-  assert.deepEqual(getQuizProgress('2026-09-25'), { current: 50, total: 50, remaining: 0 });
+  assert.deepEqual(getQuizProgress('2026-09-25'), { current: 50, total: 55, remaining: 5 });
+  assert.deepEqual(getQuizProgress('2026-10-02'), { current: 55, total: 55, remaining: 0 });
+});
+
+test('refreshed question prompts are unique from 22 July onward', () => {
+  const prompts = Object.entries(questions)
+    .filter(([date]) => date >= '2026-07-22')
+    .flatMap(([, quiz]) => quiz.questions.map((question) => question.prompt));
+  assert.equal(new Set(prompts).size, prompts.length);
 });
 
 test('question UI keeps full choices in embed and uses short answer buttons', () => {
@@ -67,5 +75,7 @@ test('question UI keeps full choices in embed and uses short answer buttons', ()
   }, 5);
   assert.match(payload.embeds[0].data.fields[0].value, /```html/);
   assert.match(payload.embeds[0].data.fields[0].value, /ข้อความตัวอย่าง/);
+  assert.match(payload.embeds[0].data.fields[0].value, /────────────/);
+  assert.doesNotMatch(payload.embeds[0].data.fields[3].value, /────────────/);
   assert.deepEqual(payload.components[0].components.map((button) => button.data.label), ['A', 'B', 'C', 'D']);
 });

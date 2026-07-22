@@ -3,6 +3,7 @@ import { config } from './config.js';
 import { calendar, getCalendarEntry, getQuiz, questionBank, saveQuiz } from './data.js';
 import {
   finishSession,
+  getAnswers,
   getLeaderboard,
   getOrCreateSession,
   getProfile,
@@ -249,6 +250,42 @@ function resultEmbed(result) {
     ].join('\n'));
 }
 
+function answerReviewEmbeds(quiz, answers) {
+  const answerByQuestion = new Map(answers.map((answer) => [answer.question_index, answer]));
+  const lines = quiz.questions.map((question, index) => {
+    const answer = answerByQuestion.get(index);
+    if (!answer) return `⚪ **ข้อ ${index + 1}** — ไม่มีคำตอบ`;
+    if (answer.is_correct) return `✅ **ข้อ ${index + 1}** — ตอบถูก`;
+
+    const selected = question.choices[answer.selected_index] ?? 'ไม่พบตัวเลือก';
+    const correct = question.choices[question.correctIndex];
+    return [
+      `❌ **ข้อ ${index + 1}** — ${question.prompt}`,
+      `คุณตอบ: **${String(selected)}**`,
+      `คำตอบที่ถูก: **${String(correct)}**`,
+      `เหตุผล: ${question.explanation}`,
+    ].join('\n');
+  });
+
+  const groups = [];
+  let current = '';
+  for (const line of lines) {
+    const candidate = current ? `${current}\n\n${line}` : line;
+    if (candidate.length > 3800 && current) {
+      groups.push(current);
+      current = line;
+    } else {
+      current = candidate;
+    }
+  }
+  if (current) groups.push(current);
+
+  return groups.map((description, index) => new EmbedBuilder()
+    .setColor(0x5865F2)
+    .setTitle(index === 0 ? '📝 สรุปคำตอบรายข้อ' : '📝 สรุปคำตอบ (ต่อ)')
+    .setDescription(description));
+}
+
 export async function handleInteraction(interaction) {
   if (interaction.isChatInputCommand()) {
     if (interaction.commandName === 'help') {
@@ -377,7 +414,11 @@ export async function handleInteraction(interaction) {
     const session = getOrCreateSession(dateKey, interaction.user.id);
 
     if (session.finished_at) {
-      return interaction.reply({ content: 'คุณทำ Quiz วันนี้เสร็จแล้ว', ephemeral: true });
+      return interaction.reply({
+        content: 'คุณทำ Quiz วันนี้เสร็จแล้ว — ดูสรุปคำตอบย้อนหลังได้ด้านล่าง',
+        embeds: answerReviewEmbeds(quiz, getAnswers(dateKey, interaction.user.id)),
+        ephemeral: true,
+      });
     }
 
     const index = session.current_index;
@@ -449,7 +490,10 @@ export async function handleInteraction(interaction) {
 
       return interaction.update({
         content: feedback,
-        embeds: [resultEmbed(completed.result)],
+        embeds: [
+          resultEmbed(completed.result),
+          ...answerReviewEmbeds(quiz, getAnswers(dateKey, interaction.user.id)),
+        ],
         components: [],
       });
     } catch (error) {

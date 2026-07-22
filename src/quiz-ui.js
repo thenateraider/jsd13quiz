@@ -47,7 +47,7 @@ export function buildQuestion(dateKey, questionIndex, question, total) {
     .setDescription(question.prompt)
     .addFields(question.choices.map((choice, index) => ({
       name: `${labels[index]}.`,
-      value: displayChoice(choice),
+      value: `${displayChoice(choice)}${index < question.choices.length - 1 ? '\n────────────' : ''}`,
     })))
     .setFooter({ text: `คะแนนพื้นฐาน ${question.points} XP` });
 

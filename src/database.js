@@ -99,6 +99,15 @@ export function getSession(dateKey, userId) {
   `).get(dateKey, userId) ?? null;
 }
 
+export function getAnswers(dateKey, userId) {
+  return db.prepare(`
+    SELECT question_index, selected_index, is_correct
+    FROM answers
+    WHERE date_key = ? AND user_id = ?
+    ORDER BY question_index
+  `).all(dateKey, userId);
+}
+
 export function recordAnswer({ dateKey, userId, questionIndex, selectedIndex, isCorrect, basePoints }) {
   const transaction = db.transaction(() => {
     db.prepare(`

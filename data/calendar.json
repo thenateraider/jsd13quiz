@@ -10,7 +10,7 @@
     "Friday"
   ],
   "first_quiz_date": "2026-07-15",
-  "last_quiz_date": "2026-09-25",
+  "last_quiz_date": "2026-10-02",
   "normal_close_rule": "Next calendar day at 16:59:59 Asia/Bangkok",
   "friday_close_rule": "Following Monday at 16:59:59 Asia/Bangkok",
   "speed_bonus": [
@@ -941,6 +941,61 @@
       "difficulty": "hard",
       "questions": 10,
       "base_score": 300,
+      "weekly_final": true
+    },
+    {
+      "date": "2026-09-28",
+      "week": 14,
+      "day": "Monday",
+      "topic": "Demo Day Preparation",
+      "focus": ["demo storyline", "seed data", "fallback plan", "team roles"],
+      "difficulty": "easy",
+      "questions": 5,
+      "base_score": 100,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-29",
+      "week": 14,
+      "day": "Tuesday",
+      "topic": "Explaining System Architecture",
+      "focus": ["system boundaries", "data flow", "component responsibilities", "trade-offs"],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 110,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-09-30",
+      "week": 14,
+      "day": "Wednesday",
+      "topic": "Deployment & Live Debugging",
+      "focus": ["health checks", "logs", "environment configuration", "rollback"],
+      "difficulty": "normal",
+      "questions": 5,
+      "base_score": 120,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-10-01",
+      "week": 14,
+      "day": "Thursday",
+      "topic": "Interview & Workplace Readiness",
+      "focus": ["STAR answers", "technical communication", "expectation management", "feedback"],
+      "difficulty": "medium",
+      "questions": 5,
+      "base_score": 130,
+      "weekly_final": false
+    },
+    {
+      "date": "2026-10-02",
+      "week": 14,
+      "day": "Friday",
+      "topic": "JSD13 Graduation Grand Final",
+      "focus": ["full-stack architecture", "secure delivery", "testing strategy", "team workflow", "demo readiness"],
+      "difficulty": "expert",
+      "questions": 20,
+      "base_score": 600,
       "weekly_final": true
     }
   ]
